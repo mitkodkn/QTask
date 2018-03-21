@@ -1,6 +1,8 @@
 package org.elsys.qtask.models;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -23,6 +25,9 @@ public class User {
 
     @Column(length = 50)
     private String lastName;
+
+    @OneToMany(mappedBy = "manager")
+    private Set<Project> projects = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -74,5 +79,13 @@ public class User {
 
     public String getFullName() {
         return this.firstName + " " + this.lastName;
+    }
+
+    public Set<Project> getProjects() {
+        return projects;
+    }
+
+    public void setProjects(Set<Project> projects) {
+        this.projects = projects;
     }
 }
