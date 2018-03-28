@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LoginComponent } from './components/public/login/login.component';
-import { HomeComponent } from './components/public/home/home.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { CreateProjectComponent } from './components/create-project/create-project.component'
 
 const routes: Routes = [
   {
@@ -17,7 +18,12 @@ const routes: Routes = [
   {
     "path": 'login',
     component: LoginComponent
-  }
+  },
+  {
+    "path": 'create-project',
+    component: CreateProjectComponent
+  },
+  
 ];
 
 @NgModule({
@@ -27,4 +33,4 @@ const routes: Routes = [
 
 export class AppRoutingModule { }
 
-export const routedComponents = [ RegisterComponent, LoginComponent, HowToUseComponent, AboutUsComponent, ContactsComponent, ParentGuideComponent, TeenJobsComponent, HomeComponent, FooterComponent, MyProfileComponent, UpdateInfoComponent, MyGroupComponent, JobsComponent, SingleJobComponent, AddJobComponent, DonateComponent, AddTaskComponent ];
+export const routedComponents = [ HomeComponent, LoginComponent, CreateProjectComponent ];
