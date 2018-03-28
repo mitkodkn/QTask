@@ -7,12 +7,16 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 
 import { AuthenticationService } from './services/auth.service';
 import { CreateProjectComponent } from './components/create-project/create-project.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    CreateProjectComponent
+    CreateProjectComponent,
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule
