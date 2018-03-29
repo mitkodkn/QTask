@@ -1,18 +1,21 @@
 package org.elsys.qtask.models;
 
+import org.hibernate.annotations.Type;
+
 import javax.persistence.*;
 
-@Entity
+@Entity(name = "tasks")
 @Table(name = "tasks")
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 127)
+    @Column(length = 128)
     private String name;
 
     @Enumerated(EnumType.STRING)
+    @Column(length = 30)
     private TaskState state;
 
     @ManyToOne(optional = false, fetch = FetchType.LAZY)

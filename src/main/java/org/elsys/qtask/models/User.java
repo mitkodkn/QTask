@@ -1,5 +1,9 @@
 package org.elsys.qtask.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -18,6 +22,8 @@ public class User {
     private String email;
 
     @Column(length = 60)
+    @Transient
+    @JsonIgnore
     private String passwordHash;
 
     @Column(length = 50)
