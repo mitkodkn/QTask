@@ -13,29 +13,35 @@ export class AuthenticationService {
 
     login(username: string, password: string): any {
         var user = { username, password };
-        return this.http
-            .post('/api/authenticate', JSON.stringify(user), this.options)
-            .toPromise()
-            .then((response: Response) => {
-                let token = response.json().id_token;
-                let role = response.json().role;
-                let groupName = response.json().group;
-                if (token) {
-                    localStorage.setItem('currentUser', JSON.stringify({ username }));
-                    localStorage.setItem('token', JSON.stringify({ token }));
-                    localStorage.setItem('role', role);
-                    localStorage.setItem('groupName', groupName);
 
-                    alert("You have logged in successfully");
-                    this.router.navigateByUrl('/home');
+        localStorage.setItem('currentUser', JSON.stringify({ username }));
 
-                    return true;
-                } 
-                else {
-                    alert("Wrong password or username. Please try again");
-                    return false;
-                }
-            });
+        alert("You have logged in successfully");
+        this.router.navigateByUrl('/home');
+
+        // return this.http
+        //     .post('/api/authenticate', JSON.stringify(user), this.options)
+        //     .toPromise()
+        //     .then((response: Response) => {
+        //         let token = response.json().id_token;
+        //         let role = response.json().role;
+        //         let groupName = response.json().group;
+        //         token = "asdfdf";
+        //         if (token) {
+        //             localStorage.setItem('currentUser', JSON.stringify({ username }));
+        //             localStorage.setItem('token', JSON.stringify({ token }));
+        //             localStorage.setItem('role', role);
+
+        //             alert("You have logged in successfully");
+        //             this.router.navigateByUrl('/home');
+
+        //             return true;
+        //         } 
+        //         else {
+        //             alert("Wrong password or username. Please try again");
+        //             return false;
+        //         }
+        //     });
     }
 
     logout(): void {

@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { CreateProjectComponent } from './components/create-project/create-project.component'
+import { MyProjectsComponent } from './components/my-projects/my-projects.component';
 
 const routes: Routes = [
   {
@@ -23,7 +24,10 @@ const routes: Routes = [
     "path": 'create-project',
     component: CreateProjectComponent
   },
-  
+  {
+    "path": 'my-project',
+    component: MyProjectsComponent
+  }
 ];
 
 @NgModule({

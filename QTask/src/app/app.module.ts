@@ -9,6 +9,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { CreateProjectComponent } from './components/create-project/create-project.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { MyProjectsComponent } from './components/my-projects/my-projects.component';
 
 import { AuthenticationService } from './services/auth.service';
 import { ProjectService } from './services/project.service';
@@ -19,7 +20,8 @@ import { ProjectService } from './services/project.service';
     NavigationComponent,
     CreateProjectComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    MyProjectsComponent
   ],
   imports: [
     BrowserModule,
