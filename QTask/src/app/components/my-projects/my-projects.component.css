@@ -24,3 +24,11 @@ ul {
 li {
     display: inline-block;
 }
+
+.justify-content-center {
+    text-align: center;
+}
+
+.portfolio-item {
+    border: 1px solid black;
+}

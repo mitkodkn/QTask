@@ -13,6 +13,8 @@ import { MyProjectsComponent } from './components/my-projects/my-projects.compon
 
 import { AuthenticationService } from './services/auth.service';
 import { ProjectService } from './services/project.service';
+import { CreateTaskComponent } from './components/create-task/create-task.component';
+import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ProjectService } from './services/project.service';
     CreateProjectComponent,
     HomeComponent,
     LoginComponent,
-    MyProjectsComponent
+    MyProjectsComponent,
+    CreateTaskComponent,
+    ProjectDetailsComponent
   ],
   imports: [
     BrowserModule,
