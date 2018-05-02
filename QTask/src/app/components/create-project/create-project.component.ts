@@ -9,15 +9,15 @@ import { Project } from './../../models/project';
   styleUrls: ['./create-project.component.css']
 })
 export class CreateProjectComponent implements OnInit {
-  model: Project;
+  project: Project;
 
-  constructor(private jobsService: ProjectService) { }
+  constructor(private projectService: ProjectService) { }
 
   ngOnInit(): void {
-    this.model = new Project('');
+    this.project = new Project('', '');
   }
 
   createProject(): void {
-    this.jobsService.createProject(this.model);
+    this.projectService.createProject(this.project);
   }
 }

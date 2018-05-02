@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from './../../models/user';
+import { AuthenticationService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+  model: User;
 
-  constructor() { }
+  constructor(private authService: AuthenticationService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.model = new User('', '', '', '', '');
   }
 
+  add(): void {
+    this.authService.register(this.model);
+  }
 }
