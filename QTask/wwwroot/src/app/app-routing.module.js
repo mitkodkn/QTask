@@ -13,6 +13,8 @@ var login_component_1 = require("./components/login/login.component");
 var create_project_component_1 = require("./components/create-project/create-project.component");
 var my_projects_component_1 = require("./components/my-projects/my-projects.component");
 var project_details_component_1 = require("./components/project-details/project-details.component");
+var register_component_1 = require("./components/register/register.component");
+var create_task_component_1 = require("./components/create-task/create-task.component");
 var routes = [
     {
         "path": '',
@@ -38,6 +40,14 @@ var routes = [
     {
         "path": 'project-details',
         component: project_details_component_1.ProjectDetailsComponent
+    },
+    {
+        "path": 'register',
+        component: register_component_1.RegisterComponent
+    },
+    {
+        "path": 'create-task',
+        component: create_task_component_1.CreateTaskComponent
     }
 ];
 var AppRoutingModule = /** @class */ (function () {

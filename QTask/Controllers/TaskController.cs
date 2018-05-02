@@ -9,9 +9,9 @@ namespace QTask.Controllers
     [Route("api/[controller]")]
     public class TaskController : Controller
     {
-        private readonly ProjectTaskDbContext _context;
+        private readonly TaskManagementDbContext _context;
 
-        public TaskController(ProjectTaskDbContext context)
+        public TaskController(TaskManagementDbContext context)
         {
             _context = context;
 

@@ -10,7 +10,7 @@ using System;
 
 namespace QTask.Migrations
 {
-    [DbContext(typeof(ProjectTaskDbContext))]
+    [DbContext(typeof(TaskManagementDbContext))]
     [Migration("20180502090234_CreateProjectsAndUsersAssociation")]
     partial class CreateProjectsAndUsersAssociation
     {

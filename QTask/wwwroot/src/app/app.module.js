@@ -21,6 +21,7 @@ var auth_service_1 = require("./services/auth.service");
 var project_service_1 = require("./services/project.service");
 var create_task_component_1 = require("./components/create-task/create-task.component");
 var project_details_component_1 = require("./components/project-details/project-details.component");
+var register_component_1 = require("./components/register/register.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -34,7 +35,8 @@ var AppModule = /** @class */ (function () {
                 login_component_1.LoginComponent,
                 my_projects_component_1.MyProjectsComponent,
                 create_task_component_1.CreateTaskComponent,
-                project_details_component_1.ProjectDetailsComponent
+                project_details_component_1.ProjectDetailsComponent,
+                register_component_1.RegisterComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,

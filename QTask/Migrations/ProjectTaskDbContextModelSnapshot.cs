@@ -10,7 +10,7 @@ using System;
 
 namespace QTask.Migrations
 {
-    [DbContext(typeof(ProjectTaskDbContext))]
+    [DbContext(typeof(TaskManagementDbContext))]
     partial class ProjectTaskDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

@@ -34,7 +34,7 @@ namespace QTask
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
-            services.AddDbContext<ProjectTaskDbContext>(options =>
+            services.AddDbContext<TaskManagementDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             // Add application services.

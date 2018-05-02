@@ -9,9 +9,9 @@ namespace QTask.Controllers
     [Route("api/[controller]")]
     public class ProjectController : Controller
     {
-        private readonly ProjectTaskDbContext _context;
+        private readonly TaskManagementDbContext _context;
 
-        public ProjectController(ProjectTaskDbContext context)
+        public ProjectController(TaskManagementDbContext context)
         {
             _context = context;
 
@@ -30,69 +30,70 @@ namespace QTask.Controllers
             }
         }
 
-        // GET: api/Task
+        // GET: api/Project
         [HttpGet]
-        public IEnumerable<Task> Get()
+        public IEnumerable<Project> Get()
         {
-            return _context.Tasks.ToList();
+            return _context.Projects.ToList();
         }
 
-        // GET: api/Task/5
+        // GET: api/Project/5
         [HttpGet("{id}", Name = "GetProject")]
         public IActionResult GetById(int id)
         {
-            var task = _context.Tasks.FirstOrDefault(t => t.Id == id);
+            var project = _context.Projects.FirstOrDefault(t => t.Id == id);
 
-            if (task == null)
+            if (project == null)
             {
                 return NotFound();
             }
 
-            return new ObjectResult(task);
+            return new ObjectResult(project);
         }
 
-        // POST: api/Task
+        // POST: api/Project
         [HttpPost]
-        public IActionResult Post([FromBody]Task task)
+        public IActionResult Post([FromBody]Project project)
         {
-            _context.Tasks.Add(task);
+            _context.Projects.Add(project);
             _context.SaveChanges();
 
-            return CreatedAtRoute("GetTask", new { id = task.Id }, task);
+            return CreatedAtRoute("GetTask", new { id = project.Id }, project);
         }
 
-        // PUT: api/Task/5
+        // PUT: api/Project/5
         [HttpPut("{id}")]
-        public IActionResult Put(long id, [FromBody]Task task)
+        public IActionResult Put(long id, [FromBody]Project project)
         {
-            var foundTask = _context.Tasks.Find(id);
+            var foundProject = _context.Projects.Find(id);
 
-            if (foundTask == null)
+            if (foundProject == null)
             {
                 return NotFound();
             }
 
-            foundTask.IsCompleted = task.IsCompleted;
-            foundTask.Name = task.Name;
+            foundProject.Name = project.Name;
+            foundProject.Description = project.Description;
+            foundProject.ManagerId = project.ManagerId;
 
-            _context.Tasks.Update(foundTask);
+            _context.Projects.Update(foundProject);
             _context.SaveChanges();
 
             return NoContent();
         }
 
-        // DELETE: api/Task/5
+        // DELETE: api/Project/5
         [HttpDelete("{id}")]
         public IActionResult Delete(long id)
         {
-            var task = _context.Tasks.Find(id);
+            var project = _context.Projects.Find(id);
 
-            if (task == null)
+            if (project == null)
             {
                 return NotFound();
             }
 
-            _context.Tasks.Remove(task);
+            _context.Projects.Remove(project);
             _context.SaveChanges();
 
             return NoContent();
