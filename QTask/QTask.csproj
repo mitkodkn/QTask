@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include=".editorconfig" />
     <Content Include=".gitignore" />
     <Content Include="e2e\app.e2e-spec.ts" />
     <Content Include="e2e\app.po.ts" />

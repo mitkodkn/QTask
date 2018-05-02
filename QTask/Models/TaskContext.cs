@@ -2,9 +2,9 @@
 
 namespace QTask.Models
 {
-    public class TaskContext : DbContext
+    public class ProjectTaskDbContext : DbContext
     {
-        public TaskContext(DbContextOptions<TaskContext> options)
+        public ProjectTaskDbContext(DbContextOptions<ProjectTaskDbContext> options)
             : base(options)
         {
         }

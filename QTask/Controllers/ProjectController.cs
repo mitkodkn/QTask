@@ -7,17 +7,25 @@ namespace QTask.Controllers
 {
     [Produces("application/json")]
     [Route("api/[controller]")]
-    public class TaskController : Controller
+    public class ProjectController : Controller
     {
         private readonly ProjectTaskDbContext _context;
 
-        public TaskController(ProjectTaskDbContext context)
+        public ProjectController(ProjectTaskDbContext context)
         {
             _context = context;
 
             if (_context.Tasks.Count() == 0)
             {
                 _context.Tasks.Add(new Task { Name = "First Task" });
+
+                //_context.Projects.Add(new Project
+                //{
+                //    Name = "Project 1",
+                //    Description = "First project description",
+                //    ManagerId = 1
+                //});
+
                 _context.SaveChanges();
             }
         }
@@ -30,7 +38,7 @@ namespace QTask.Controllers
         }
 
         // GET: api/Task/5
-        [HttpGet("{id}", Name = "GetTask")]
+        [HttpGet("{id}", Name = "GetProject")]
         public IActionResult GetById(int id)
         {
             var task = _context.Tasks.FirstOrDefault(t => t.Id == id);
