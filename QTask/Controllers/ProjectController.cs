@@ -21,7 +21,9 @@ namespace QTask.Controllers
         [HttpGet]
         public IEnumerable<Project> Get()
         {
-            return _context.Projects.ToList();
+            return _context.Projects
+                .Include(project => project.Tasks)
+                .ToList();
         }
 
         // GET: api/Project/5
