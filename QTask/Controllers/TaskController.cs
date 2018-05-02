@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using QTask.Models;
 
 namespace QTask.Controllers
@@ -17,8 +18,8 @@ namespace QTask.Controllers
 
             if (_context.Tasks.Count() == 0)
             {
-                _context.Tasks.Add(new Task { Name = "First Task" });
-                _context.SaveChanges();
+                //_context.Tasks.Add(new Task { Name = "First Task" });
+                //_context.SaveChanges();
             }
         }
 
@@ -31,9 +32,11 @@ namespace QTask.Controllers
 
         // GET: api/Task/5
         [HttpGet("{id}", Name = "GetTask")]
-        public IActionResult GetById(int id)
+        public IActionResult GetById(long id)
         {
-            var task = _context.Tasks.FirstOrDefault(t => t.Id == id);
+            var task = _context.Tasks
+                .Include(t => t.Project)
+                .FirstOrDefault(t => t.TaskId == id);
 
             if (task == null)
             {
@@ -50,7 +53,7 @@ namespace QTask.Controllers
             _context.Tasks.Add(task);
             _context.SaveChanges();
 
-            return CreatedAtRoute("GetTask", new { id = task.Id }, task);
+            return new ObjectResult(task);
         }
 
         // PUT: api/Task/5

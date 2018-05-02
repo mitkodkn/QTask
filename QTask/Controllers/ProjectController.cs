@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using QTask.Models;
 
 namespace QTask.Controllers
@@ -14,20 +15,6 @@ namespace QTask.Controllers
         public ProjectController(TaskManagementDbContext context)
         {
             _context = context;
-
-            if (_context.Tasks.Count() == 0)
-            {
-                _context.Tasks.Add(new Task { Name = "First Task" });
-
-                //_context.Projects.Add(new Project
-                //{
-                //    Name = "Project 1",
-                //    Description = "First project description",
-                //    ManagerId = 1
-                //});
-
-                _context.SaveChanges();
-            }
         }
 
         // GET: api/Project
@@ -41,7 +28,9 @@ namespace QTask.Controllers
         [HttpGet("{id}", Name = "GetProject")]
         public IActionResult GetById(int id)
         {
-            var project = _context.Projects.FirstOrDefault(t => t.Id == id);
+            var project = _context.Projects
+                .Include(p => p.Tasks)
+                .FirstOrDefault(t => t.ProjectId == id);
 
             if (project == null)
             {
@@ -58,7 +47,7 @@ namespace QTask.Controllers
             _context.Projects.Add(project);
             _context.SaveChanges();
 
-            return CreatedAtRoute("GetTask", new { id = project.Id }, project);
+            return CreatedAtRoute("GetProject", new { id = project.ProjectId }, project);
         }
 
         // PUT: api/Project/5
@@ -74,7 +63,7 @@ namespace QTask.Controllers
 
             foundProject.Name = project.Name;
             foundProject.Description = project.Description;
-            foundProject.ManagerId = project.ManagerId;
+            //foundProject.Id = project.ManagerId;
 
             _context.Projects.Update(foundProject);
             _context.SaveChanges();
