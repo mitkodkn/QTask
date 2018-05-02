@@ -31,3 +31,25 @@ body {
 ::placeholder{
     font-style: oblique;
 }
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #dad0d0;
+    font-style: oblique;
+}
+
+.glyphicon:hover {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+label:hover
+{
+    font-style: oblique;
+}
