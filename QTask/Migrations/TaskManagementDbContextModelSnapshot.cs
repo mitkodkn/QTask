@@ -10,8 +10,8 @@ using System;
 
 namespace QTask.Migrations
 {
-    [DbContext(typeof(ProjectTaskDbContext))]
-    partial class ProjectTaskDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(TaskManagementDbContext))]
+    partial class TaskManagementDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -20,18 +20,44 @@ namespace QTask.Migrations
                 .HasAnnotation("ProductVersion", "2.0.1-rtm-125")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("QTask.Models.Project", b =>
+                {
+                    b.Property<long>("ProjectId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("Name");
+
+                    b.HasKey("ProjectId");
+
+                    b.ToTable("Projects");
+                });
+
             modelBuilder.Entity("QTask.Models.Task", b =>
                 {
-                    b.Property<long>("Id")
+                    b.Property<long>("TaskId")
                         .ValueGeneratedOnAdd();
 
                     b.Property<bool>("IsCompleted");
 
                     b.Property<string>("Name");
 
-                    b.HasKey("Id");
+                    b.Property<long>("ProjectId");
+
+                    b.HasKey("TaskId");
+
+                    b.HasIndex("ProjectId");
 
                     b.ToTable("Tasks");
+                });
+
+            modelBuilder.Entity("QTask.Models.Task", b =>
+                {
+                    b.HasOne("QTask.Models.Project", "Project")
+                        .WithMany("Tasks")
+                        .HasForeignKey("ProjectId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

@@ -2,8 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <UserSecretsId>aspnet-LoginApp-1CD3DC1E-E8C2-408D-BB0E-0D4CD90ED3D7</UserSecretsId>
+    <UserSecretsId>QTask-1CD3DC1E-E8C2-408D-BB0E-0D4CD90ED3D7</UserSecretsId>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="obj\bin\**" />
+    <Content Remove="obj\bin\**" />
+    <EmbeddedResource Remove="obj\bin\**" />
+    <None Remove="obj\bin\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <Content Include=".gitignore" />

@@ -7,11 +7,13 @@ namespace QTask.Models
 {
     public class Project
     {
-        public long Id { get; set; }
+        public long ProjectId { get; set; }
         public String Name { get; set; }
         public String Description { get; set; }
-        public long ManagerId { get; set; }
 
-        public virtual ApplicationUser Manager { get; set; }
+        //public string ManagerId { get; set; }
+
+        //public virtual ApplicationUser Manager { get; set; }
+        public virtual List<Task> Tasks { get; set; }
     }
 }
