@@ -29,6 +29,6 @@ namespace QTask.Models
 
         public DbSet<Task> Tasks { get; set; }
         public DbSet<Project> Projects { get; set; }
-        public DbSet<ApplicationUser> Managers { get; set; }
+        //public DbSet<ApplicationUser> Managers { get; set; }
     }
 }
