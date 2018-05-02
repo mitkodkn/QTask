@@ -2,19 +2,83 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <TypeScriptToolsVersion>2.5</TypeScriptToolsVersion>
+    <UserSecretsId>aspnet-LoginApp-1CD3DC1E-E8C2-408D-BB0E-0D4CD90ED3D7</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNet.Identity.EntityFramework" Version="2.2.1" />
+    <Content Include=".editorconfig" />
+    <Content Include=".gitignore" />
+    <Content Include="e2e\app.e2e-spec.ts" />
+    <Content Include="e2e\app.po.ts" />
+    <Content Include="karma.conf.js" />
+    <Content Include="protractor.conf.js" />
+    <Content Include="README.md" />
+    <Content Include="src\app\app-routing.module.ts" />
+    <Content Include="src\app\app.component.css" />
+    <Content Include="src\app\app.component.html" />
+    <Content Include="src\app\app.component.spec.ts" />
+    <Content Include="src\app\app.component.ts" />
+    <Content Include="src\app\app.module.ts" />
+    <Content Include="src\app\components\create-project\create-project.component.css" />
+    <Content Include="src\app\components\create-project\create-project.component.html" />
+    <Content Include="src\app\components\create-project\create-project.component.spec.ts" />
+    <Content Include="src\app\components\create-project\create-project.component.ts" />
+    <Content Include="src\app\components\create-task\create-task.component.css" />
+    <Content Include="src\app\components\create-task\create-task.component.html" />
+    <Content Include="src\app\components\create-task\create-task.component.spec.ts" />
+    <Content Include="src\app\components\create-task\create-task.component.ts" />
+    <Content Include="src\app\components\home\home.component.css" />
+    <Content Include="src\app\components\home\home.component.html" />
+    <Content Include="src\app\components\home\home.component.spec.ts" />
+    <Content Include="src\app\components\home\home.component.ts" />
+    <Content Include="src\app\components\login\login.component.css" />
+    <Content Include="src\app\components\login\login.component.html" />
+    <Content Include="src\app\components\login\login.component.spec.ts" />
+    <Content Include="src\app\components\login\login.component.ts" />
+    <Content Include="src\app\components\my-projects\my-projects.component.css" />
+    <Content Include="src\app\components\my-projects\my-projects.component.html" />
+    <Content Include="src\app\components\my-projects\my-projects.component.spec.ts" />
+    <Content Include="src\app\components\my-projects\my-projects.component.ts" />
+    <Content Include="src\app\components\navigation\navigation.component.css" />
+    <Content Include="src\app\components\navigation\navigation.component.html" />
+    <Content Include="src\app\components\navigation\navigation.component.spec.ts" />
+    <Content Include="src\app\components\navigation\navigation.component.ts" />
+    <Content Include="src\app\components\project-details\project-details.component.css" />
+    <Content Include="src\app\components\project-details\project-details.component.html" />
+    <Content Include="src\app\components\project-details\project-details.component.spec.ts" />
+    <Content Include="src\app\components\project-details\project-details.component.ts" />
+    <Content Include="src\app\models\project.ts" />
+    <Content Include="src\app\models\task.ts" />
+    <Content Include="src\app\models\user.ts" />
+    <Content Include="src\app\services\auth.service.ts" />
+    <Content Include="src\app\services\project.service.ts" />
+    <Content Include="src\assets\.gitkeep" />
+    <Content Include="src\environments\environment.prod.ts" />
+    <Content Include="src\environments\environment.ts" />
+    <Content Include="src\favicon.ico" />
+    <Content Include="src\index.html" />
+    <Content Include="src\main.ts" />
+    <Content Include="src\polyfills.ts" />
+    <Content Include="src\styles.css" />
+    <Content Include="src\test.ts" />
+    <Content Include="src\typings.d.ts" />
+  </ItemGroup>
+
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.2" />
-    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.1" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.1" />
+    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.0" />
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>
