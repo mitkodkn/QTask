@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Task } from './../../models/task';
+import { User } from './../../models/user';
+import { TaskService } from '../../services/task.service';
 
 @Component({
   selector: 'app-create-task',
@@ -6,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-task.component.css']
 })
 export class CreateTaskComponent implements OnInit {
+  task: Task;
 
-  constructor() { }
+  constructor(private taskService: TaskService) {
+    this.task = new Task('', '', '', new User('', '', '', '', ''), new User('', '', '', '', ''));
+   }
 
   ngOnInit() {
   }
 
+  createProject(): void {
+    this.taskService.createTask(this.task);
+  }
 }

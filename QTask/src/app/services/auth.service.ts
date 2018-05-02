@@ -3,6 +3,8 @@ import { Http, Headers, Response, RequestOptions } from '@angular/http';
 import { Router } from '@angular/router';
 import 'rxjs/add/operator/toPromise';
 
+import { User } from './../models/user';
+
 @Injectable()
 export class AuthenticationService {
     private headers = new Headers({ 'Content-Type': 'application/json', 'charset': 'UTF-8' });
@@ -43,6 +45,18 @@ export class AuthenticationService {
         //         }
         //     });
     }
+
+    register(user: User): any{
+        return this.http
+          .post('/api/account', JSON.stringify(user), this.options)
+          .toPromise()
+          .then(response =>{
+            this.router.navigateByUrl('/login');
+            alert("You have registered successfully");
+            response.json().data 
+          })
+          .catch(er => alert(JSON.parse(er._body).error));
+      }
 
     logout(): void {
         alert("You have successfully logged out");

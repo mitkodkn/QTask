@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: #fbf5f5;
+}
+
+.pagination > li > a {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #1b1c1d;
+    text-decoration: none;
+    background-color: #d0d0d0;
+    border: 1px solid #ddd;
+}
+
+.pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #1b1c1d;
+    text-decoration: none;
+    background-color: #d0d0d0;
+    border: 1px solid #ddd;
+}
+
+::placeholder{
+    font-style: oblique;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #dad0d0;
+    font-style: oblique;
+}
+
+.glyphicon:hover {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+label:hover
+{
+    font-style: oblique;
+}

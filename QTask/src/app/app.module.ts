@@ -16,6 +16,7 @@ import { ProjectService } from './services/project.service';
 import { CreateTaskComponent } from './components/create-task/create-task.component';
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 import { RegisterComponent } from './components/register/register.component';
+import { EditTaskComponent } from './components/edit-task/edit-task.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RegisterComponent } from './components/register/register.component';
     MyProjectsComponent,
     CreateTaskComponent,
     ProjectDetailsComponent,
-    RegisterComponent
+    RegisterComponent,
+    EditTaskComponent
   ],
   imports: [
     BrowserModule,

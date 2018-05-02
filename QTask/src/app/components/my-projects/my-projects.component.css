@@ -32,3 +32,29 @@ li {
 .portfolio-item {
     border: 1px solid black;
 }
+
+.btn-block {
+    background-color: #d0cfcf;
+    border-radius: 10px;
+}
+
+.btn-block:hover {
+    background-color: #b3b3b3;
+}
+
+.card-text {
+    border-style: outset;
+}
+
+.card-text:hover {
+    background-color: #f1f1f1;
+    border-style: ridge;
+}
+
+.project-name {
+    color: #3b4248;
+}
+
+.project-name:hover {
+    color: #536564;
+}

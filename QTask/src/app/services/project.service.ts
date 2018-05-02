@@ -11,14 +11,14 @@ export class ProjectService {
     private options = new RequestOptions({ headers: this.headers });
 
     private projects = [
-        new Project("NEznam1"),
-        new Project("NEznam2"),
-        new Project("NEznam3"),
-        new Project("NEznam4"),
-        new Project("NEznam5"),
-        new Project("NEznam6"),
-        new Project("NEznam7"),
-        new Project("NEznam8"),
+        new Project("NEznam1", "asdfasdf"),
+        new Project("NEznam2", "asdfasdf"),
+        new Project("NEznam3", "asdfasdf"),
+        new Project("NEznam4", "asdfasdf"),
+        new Project("NEznam5", "asdfasdf"),
+        new Project("NEznam6", "asdfasdf"),
+        new Project("NEznam7", "asdfasdf"),
+        new Project("NEznam8", "asdfasdf"),
     ] 
 
     constructor(private http: Http, private router: Router) {
@@ -29,7 +29,7 @@ export class ProjectService {
             .post('/api/projects', JSON.stringify(project), this.options)
             .toPromise()
             .then(response =>{
-              //  this.router.navigateByUrl('/jobs');
+                this.router.navigateByUrl('/home');
                 alert("You have created project successfully.");
                 response.json().data 
             })
@@ -47,5 +47,17 @@ export class ProjectService {
         //         return response.json().data 
         //     })
         //     .catch(er => alert(JSON.parse(er._body).error));
+    }
+
+    getProject(id: number) {
+        return this.http
+            .get('/api/project' + id, this.options)
+            .toPromise()
+            .then(response =>{
+                this.router.navigateByUrl('/home');
+                alert("You have created project successfully.");
+                return response.json().data 
+            })
+            .catch(er => alert(JSON.parse(er._body).error));
     }
 }

@@ -30,12 +30,18 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_create_project_create_project_component__ = __webpack_require__("./src/app/components/create-project/create-project.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_my_projects_my_projects_component__ = __webpack_require__("./src/app/components/my-projects/my-projects.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_project_details_project_details_component__ = __webpack_require__("./src/app/components/project-details/project-details.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_register_register_component__ = __webpack_require__("./src/app/components/register/register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_create_task_create_task_component__ = __webpack_require__("./src/app/components/create-task/create-task.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_edit_task_edit_task_component__ = __webpack_require__("./src/app/components/edit-task/edit-task.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -68,6 +74,18 @@ var routes = [
     {
         "path": 'project-details',
         component: __WEBPACK_IMPORTED_MODULE_6__components_project_details_project_details_component__["a" /* ProjectDetailsComponent */]
+    },
+    {
+        "path": 'register',
+        component: __WEBPACK_IMPORTED_MODULE_7__components_register_register_component__["a" /* RegisterComponent */]
+    },
+    {
+        "path": 'create-task',
+        component: __WEBPACK_IMPORTED_MODULE_8__components_create_task_create_task_component__["a" /* CreateTaskComponent */]
+    },
+    {
+        "path": 'edit-task',
+        component: __WEBPACK_IMPORTED_MODULE_9__components_edit_task_edit_task_component__["a" /* EditTaskComponent */]
     }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -152,12 +170,16 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_project_service__ = __webpack_require__("./src/app/services/project.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_create_task_create_task_component__ = __webpack_require__("./src/app/components/create-task/create-task.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_project_details_project_details_component__ = __webpack_require__("./src/app/components/project-details/project-details.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_register_register_component__ = __webpack_require__("./src/app/components/register/register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_edit_task_edit_task_component__ = __webpack_require__("./src/app/components/edit-task/edit-task.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -186,7 +208,9 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_9__components_login_login_component__["a" /* LoginComponent */],
                 __WEBPACK_IMPORTED_MODULE_10__components_my_projects_my_projects_component__["a" /* MyProjectsComponent */],
                 __WEBPACK_IMPORTED_MODULE_13__components_create_task_create_task_component__["a" /* CreateTaskComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__components_project_details_project_details_component__["a" /* ProjectDetailsComponent */]
+                __WEBPACK_IMPORTED_MODULE_14__components_project_details_project_details_component__["a" /* ProjectDetailsComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__components_register_register_component__["a" /* RegisterComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__components_edit_task_edit_task_component__["a" /* EditTaskComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -267,14 +291,14 @@ var CreateProjectComponent = /** @class */ (function () {
 /***/ "./src/app/components/create-task/create-task.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "h2 {\r\n    text-align: center;\r\n    margin-bottom: 30px;\r\n    margin-top: 30px;\r\n}\r\n\r\ninput {\r\n    width: 85%;\r\n}\r\n\r\nform {\r\n    margin-top: 5%;\r\n    margin-bottom: 282px;\r\n}\r\n\r\n.container {\r\n    margin-top: 50px\r\n}"
 
 /***/ }),
 
 /***/ "./src/app/components/create-task/create-task.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <h2>LOGIN</h2>\r\n    <hr>\r\n    <form class=\"form-horizontal\" #loginForm=\"ngForm\" (ngSubmit)=\"login();\">\r\n        <div class=\"form-group\">\r\n            <label class=\"control-label col-sm-2\" for=\"email\">User Name:</label>\r\n            <div class=\"col-sm-10\">\r\n                <input type=\"name\" class=\"form-control\" id=\"userName\" placeholder=\"User Name\" name=\"username\" [(ngModel)]=\"model.username\">\r\n            </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label class=\"control-label col-sm-2\" for=\"pwd\">Password:</label>\r\n            <div class=\"col-sm-10\">\r\n                <input type=\"password\" class=\"form-control\" id=\"pwd\" placeholder=\"Enter password\" name=\"password\" [(ngModel)]=\"model.passwordHash\">\r\n            </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <div class=\"col-sm-offset-2 col-sm-10\">\r\n                <button type=\"submit\" class=\"btn btn-primary\">SUBMIT</button>\r\n            </div>\r\n        </div>\r\n    </form>\r\n</div>\r\n<br>"
+module.exports = "<div class=\"container\">\r\n    <h2>CREATE TASK</h2>\r\n    <hr>\r\n    <form class=\"form-horizontal\" #loginForm=\"ngForm\" (ngSubmit)=\"login();\">\r\n        <div class=\"form-group\">\r\n            <label class=\"control-label col-sm-2\" for=\"title\">Title:</label>\r\n            <div class=\"col-sm-10\">\r\n                <input type=\"text\" class=\"form-control\" id=\"title\" placeholder=\"Title\" name=\"title\" [(ngModel)]=\"model.title\">\r\n            </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label class=\"control-label col-sm-2\" for=\"description\">Description:</label>\r\n            <div class=\"col-sm-10\">\r\n                <input type=\"text\" class=\"form-control\" id=\"description\" placeholder=\"Description\" name=\"description\" [(ngModel)]=\"model.passwordHash\">\r\n            </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label class=\"control-label col-sm-2\" for=\"description\">Description:</label>\r\n            <div class=\"col-sm-10\">\r\n                <label class=\"radio-inline\">\r\n                    <input type=\"radio\" name=\"inlineRadioOptions\" id=\"inlineRadio1\" value=\"new\" name=\"state\" [(ngModel)]=\"model.role\"> <span> NEW</span>\r\n                </label>\r\n                <label class=\"radio-inline\">\r\n                    <input type=\"radio\" name=\"inlineRadioOptions\" id=\"inlineRadio2\" value=\"in progress\" name=\"state\" [(ngModel)]=\"model.role\"> <span> IN PROGRESS</span>\r\n                </label>\r\n                <label class=\"radio-inline\">\r\n                    <input type=\"radio\" name=\"inlineRadioOptions\" id=\"inlineRadio2\" value=\"completed\" name=\"state\" [(ngModel)]=\"model.role\"> <span> COMPLETED</span>\r\n                </label>\r\n                <label class=\"radio-inline\">\r\n                    <input type=\"radio\" name=\"inlineRadioOptions\" id=\"inlineRadio2\" value=\"removed\" name=\"state\" [(ngModel)]=\"model.role\"> <span> REMOVED</span>\r\n                </label>\r\n            </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label class=\"control-label col-sm-2\" for=\"executor\">Executor:</label>\r\n            <div class=\"col-sm-10\">\r\n                <input type=\"text\" class=\"form-control\" id=\"executor\" placeholder=\"Executor\" name=\"executor\" [(ngModel)]=\"model.passwordHash\">\r\n            </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <div class=\"col-sm-offset-2 col-sm-10\">\r\n                <button type=\"submit\" class=\"btn btn-primary\">CREATE TASK</button>\r\n            </div>\r\n        </div>\r\n    </form>\r\n</div>\r\n<br>"
 
 /***/ }),
 
@@ -308,6 +332,56 @@ var CreateTaskComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], CreateTaskComponent);
     return CreateTaskComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/edit-task/edit-task.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/edit-task/edit-task.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n    <h2>EDIT TASK</h2>\n    <hr>\n    <form class=\"form-horizontal\" #loginForm=\"ngForm\" (ngSubmit)=\"login();\">\n        <div class=\"form-group\">\n            <label class=\"control-label col-sm-2\" for=\"title\">Title:</label>\n            <div class=\"col-sm-10\">\n                <input type=\"text\" class=\"form-control\" id=\"title\" placeholder=\"Title\" name=\"title\" [(ngModel)]=\"model.title\">\n            </div>\n        </div>\n        <div class=\"form-group\">\n            <label class=\"control-label col-sm-2\" for=\"description\">Description:</label>\n            <div class=\"col-sm-10\">\n                <input type=\"text\" class=\"form-control\" id=\"description\" placeholder=\"Description\" name=\"description\" [(ngModel)]=\"model.passwordHash\">\n            </div>\n        </div>\n        <div class=\"form-group\">\n            <label class=\"control-label col-sm-2\" for=\"description\">Description:</label>\n            <div class=\"col-sm-10\">\n                <label class=\"radio-inline\">\n                    <input type=\"radio\" name=\"inlineRadioOptions\" id=\"inlineRadio1\" value=\"new\" name=\"state\" [(ngModel)]=\"model.role\"> <span> NEW</span>\n                </label>\n                <label class=\"radio-inline\">\n                    <input type=\"radio\" name=\"inlineRadioOptions\" id=\"inlineRadio2\" value=\"in progress\" name=\"state\" [(ngModel)]=\"model.role\"> <span> IN PROGRESS</span>\n                </label>\n                <label class=\"radio-inline\">\n                    <input type=\"radio\" name=\"inlineRadioOptions\" id=\"inlineRadio2\" value=\"completed\" name=\"state\" [(ngModel)]=\"model.role\"> <span> COMPLETED</span>\n                </label>\n                <label class=\"radio-inline\">\n                    <input type=\"radio\" name=\"inlineRadioOptions\" id=\"inlineRadio2\" value=\"removed\" name=\"state\" [(ngModel)]=\"model.role\"> <span> REMOVED</span>\n                </label>\n            </div>\n        </div>\n        <div class=\"form-group\">\n            <label class=\"control-label col-sm-2\" for=\"executor\">Executor:</label>\n            <div class=\"col-sm-10\">\n                <input type=\"text\" class=\"form-control\" id=\"executor\" placeholder=\"Executor\" name=\"executor\" [(ngModel)]=\"model.passwordHash\">\n            </div>\n        </div>\n        <div class=\"form-group\">\n            <div class=\"col-sm-offset-2 col-sm-10\">\n                <button type=\"submit\" class=\"btn btn-primary\">SAVE TASK</button>\n            </div>\n        </div>\n    </form>\n</div>\n<br>"
+
+/***/ }),
+
+/***/ "./src/app/components/edit-task/edit-task.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditTaskComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var EditTaskComponent = /** @class */ (function () {
+    function EditTaskComponent() {
+    }
+    EditTaskComponent.prototype.ngOnInit = function () {
+    };
+    EditTaskComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-edit-task',
+            template: __webpack_require__("./src/app/components/edit-task/edit-task.component.html"),
+            styles: [__webpack_require__("./src/app/components/edit-task/edit-task.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], EditTaskComponent);
+    return EditTaskComponent;
 }());
 
 
@@ -490,7 +564,7 @@ module.exports = ".navbar {\r\n    margin-bottom: 0;\r\n    border-radius: 0;\r\
 /***/ "./src/app/components/navigation/navigation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n  <div class=\"container-fluid\">\r\n      <div class=\"navbar-header\">\r\n          <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#myNavbar\">\r\n              <span class=\"icon-bar\"></span>\r\n              <span class=\"icon-bar\"></span>\r\n              <span class=\"icon-bar\"></span>\r\n          </button>\r\n          <a class=\"navbar-brand\" routerLink=\"/home\"><img class=\"logo\" src=\"./../../../../Resources/logo.PNG\"> </a>\r\n      </div>\r\n      <div class=\"collapse navbar-collapse\" id=\"myNavbar\">\r\n                <ul class=\"nav navbar-nav\">\r\n                        <li><a routerLink=\"/create-project\"><span class=\"ICON-CLASS\"></span> CREATE PROJECT</a></li>\r\n                </ul>\r\n          <ul class=\"nav navbar-nav navbar-right\">\r\n              <li *ngIf=\"isLoggedIn()\"><a routerLink=\"/my-project\"><span class=\"glyphicon glyphicon-th\"></span> MY PROJECTS</a></li>\r\n              <li *ngIf=\"isLoggedIn()\"><a (click)=\"logout()\" routerLink=\"/home\"><span class=\"glyphicon glyphicon-log-out\"></span> LOGOUT</a></li>\r\n              <li *ngIf=\"!isLoggedIn()\"><a routerLink=\"/login\"><span class=\"glyphicon glyphicon-log-in\" ></span> LOGIN</a></li>\r\n          </ul>\r\n      </div>\r\n  </div>\r\n</nav>"
+module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n  <div class=\"container-fluid\">\r\n      <div class=\"collapse navbar-collapse\" id=\"myNavbar\">\r\n                <ul class=\"nav navbar-nav\">\r\n                    <li><a routerLink=\"/home\"><span></span> HOME</a></li>\r\n                    <li *ngIf=\"isLoggedIn()\"><a routerLink=\"/create-project\"><span class=\"ICON-CLASS\"></span> CREATE PROJECT</a></li>\r\n                </ul>\r\n          <ul class=\"nav navbar-nav navbar-right\">\r\n              <li *ngIf=\"isLoggedIn()\"><a routerLink=\"/my-project\"><span class=\"glyphicon glyphicon-th\"></span> MY PROJECTS</a></li>\r\n              <li *ngIf=\"isLoggedIn()\"><a (click)=\"logout()\" routerLink=\"/home\"><span class=\"glyphicon glyphicon-log-out\"></span> LOGOUT</a></li>\r\n              <li *ngIf=\"!isLoggedIn()\"><a routerLink=\"/login\"><span class=\"glyphicon glyphicon-log-in\" ></span> LOGIN</a></li>\r\n              <li *ngIf=\"!isLoggedIn()\"><a routerLink=\"/register\"><span class=\"glyphicon glyphicon-lock\"></span> REGISTER</a></li>\r\n          </ul>\r\n      </div>\r\n  </div>\r\n</nav>"
 
 /***/ }),
 
@@ -542,14 +616,14 @@ var NavigationComponent = /** @class */ (function () {
 /***/ "./src/app/components/project-details/project-details.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".container {\r\n    margin-top: -15px;\r\n    margin-bottom: 30px;\r\n}\r\n\r\n#members {\r\n    margin-top: -10px;\r\n}\r\n\r\n.link {\r\n    color: white;\r\n    background-color: royalblue;\r\n    padding: 10px\r\n}\r\n\r\n.important {\r\n    border-radius: unset;\r\n}\r\n\r\n.important-box {\r\n    border: 2px solid darkslategrey;\r\n    padding: 10px\r\n}\r\n\r\n.right {\r\n    float: right;\r\n    margin-top: 20px\r\n}\r\n\r\n.container {\r\n    margin-top: 50px\r\n}\r\n\r\nimg {\r\n    max-width: 200px;\r\n    height: auto\r\n}\r\n\r\n.submit {\r\n    margin-left: -58px;\r\n    margin-top: 5px;\r\n}\r\n\r\n#childName {\r\n    margin-left: -15px;\r\n}\r\n\r\n#Avatar {\r\n    margin-left: -15px;\r\n}\r\n\r\n#description {\r\n    font-size: 16px;\r\n}\r\n\r\n.checkbox img {\r\n    float: right;\r\n    display: inline-block;\r\n    width: 25px;\r\n}"
 
 /***/ }),
 
 /***/ "./src/app/components/project-details/project-details.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-lg-12\">\r\n            <h2 class=\"page-header\">Project</h2>\r\n        </div>\r\n    </div>\r\n\r\n    <div id=\"members\" class=\"row\">\r\n        <div class=\"col-lg-12\">\r\n            <h3 class=\"page-header\">Group Overview</h3>\r\n        </div>\r\n        <div class=\"col-lg-4 col-sm-6 text-center\">\r\n            <img class=\"img-responsive img-rounded img-center\" src=\"http://placehold.it/200x200\" alt=\"\">\r\n            <h3><strong>Project NAME</strong></h3>\r\n        </div>\r\n        <div class=\"col-xs-12 col-md-8 text-left\">\r\n\r\n        </div>\r\n        <!--<div class=\"col-lg-4 col-sm-6 text-center\">\r\n        </div>-->\r\n        <div class=\"col-lg-4 col-sm-6 text-left\">\r\n            <h4 class=\"link\"><strong>GROUP INFORMATION</strong></h4>\r\n            <p><strong>Child members: </strong> Childrens</p>\r\n            <p><strong>Created by: </strong> Parent Name</p>\r\n            <p><strong>Created At: </strong> DD:MM:SS</p>\r\n            <br>\r\n            <h4 class=\"link\"><strong>OPTIONS</strong></h4>\r\n            <p><a class=\"btn btn-lg btn-warning\" routerLink=\"#\" role=\"button\" (click)=\"showClass = !showClass\">ADD CHILD</a></p>\r\n            <label [ngClass]=\"{ 'hidden': showClass }\">\r\n                <div class=\"col-sm-10\">\r\n                    <input type=\"text\" class=\"form-control\" id=\"childName\" placeholder=\"Child Name\">\r\n                </div>\r\n                <div class=\"col-sm-offset-2 col-sm-10\">\r\n                    <button type=\"submit\" class=\"btn btn-primary submit\">SUBMIT</button>\r\n                </div>\r\n            </label>\r\n            <p><a class=\"btn btn-lg btn-info\" routerLink=\"#\" role=\"button\" (click)=\"showClass1 = !showClass1\">ADD GROUP AVATAR</a></p>\r\n            <label [ngClass]=\"{ 'hidden': showClass1 }\">\r\n                <div class=\"col-sm-10\">\r\n                    <input type=\"text\" class=\"form-control\" id=\"Avatar\" placeholder=\"Avatar Url\">\r\n                </div>\r\n                <div class=\"col-sm-offset-2 col-sm-10\">\r\n                    <button type=\"submit\" class=\"btn btn-primary submit\">SUBMIT</button>\r\n                </div>\r\n            </label>\r\n        </div>\r\n        <div class=\"col-lg-4 col-sm-6 text-left\">\r\n            <h4 class=\"link\"><strong>TODO LIST</strong></h4>\r\n            <div class=\"important-box\">\r\n                <div class=\"checkbox\">\r\n                    <label>\r\n                <input type=\"checkbox\" value=\"\">\r\n                To study all new lessons for school\r\n              </label>\r\n                </div>\r\n                <div class=\"checkbox\">\r\n                    <label>\r\n                <input type=\"checkbox\" value=\"\">\r\n                To do all homework for tomorrow\r\n              </label>\r\n                </div>\r\n                <div class=\"checkbox\">\r\n                    <label>\r\n                <input type=\"checkbox\" value=\"\">\r\n                To go to swimming pool for workout\r\n              </label>\r\n                </div>\r\n                <div class=\"checkbox\">\r\n                    <label>\r\n                <input type=\"checkbox\" value=\"\">\r\n                To clean and organize your bedroom\r\n              </label>\r\n                </div>\r\n                <div class=\"checkbox\">\r\n                    <label>\r\n                <input type=\"checkbox\" value=\"\" >\r\n                To wash the dishes\r\n              </label>\r\n                </div>\r\n                <div class=\"checkbox\">\r\n                    <label>\r\n                <input type=\"checkbox\" value=\"\">\r\n                Go to walk with the dog\r\n              </label>\r\n                </div>\r\n            </div>\r\n            <p><a class=\"btn btn-lg btn-success right\" routerLink=\"/add-task\" role=\"button\">ADD NEW TASK</a></p>\r\n        </div>\r\n        <br><br>\r\n        <!--<div class=\"row\">\r\n            <div class=\"col-lg-12\">\r\n            </div>\r\n        </div>-->\r\n        <div class=\"row\">\r\n            <div class=\"col-lg-12\">\r\n                <br><br>\r\n                <p>Fin more information about the app here: <a href=\"/about-us\" target=\"_blank\">ABOUT THE APP</a></p>\r\n                <p>Video tuttorial: <a href=\"/how-to-use\" target=\"_blank\">HOW TO USE IT</a></p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n<br>"
+module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n        <div class=\"col-lg-12\">\r\n            <h2 class=\"page-header\">Project</h2>\r\n        </div>\r\n    </div>\r\n\r\n    <div id=\"members\" class=\"row\">\r\n        \r\n        <div class=\"col-lg-4 col-sm-6 text-center\">\r\n            <h3><strong>Project NAME</strong></h3>\r\n        </div>\r\n        <div class=\"col-lg-4 col-sm-6 text-left\">\r\n            <h4 class=\"link\"><strong>DESCRIPTION</strong></h4>\r\n            <p id=\"description\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>\r\n        </div>\r\n        <div class=\"col-lg-4 col-sm-6 text-left\">\r\n            <h4 class=\"link\"><strong>TASKS</strong></h4>\r\n            <div class=\"important-box\">\r\n                <div class=\"checkbox\">\r\n                    <span>To study all new lessonsasdfasdfasdfasdfasdf for school</span>\r\n                    <img class=\"img-responsive\" id=\"delete-icon\" src=\"https://cdn2.iconfinder.com/data/icons/e-business-helper/240/627249-delete3-512.png\">\r\n                    <a routerLink=\"/edit-task\"><img class=\"img-responsive\" id=\"edit-icon\" src=\"https://cdn3.iconfinder.com/data/icons/block/32/box_edit-512.png\"></a>\r\n                </div>\r\n            </div>\r\n            <p><a class=\"btn btn-lg btn-success right\" routerLink=\"/create-task\" role=\"button\">ADD NEW TASK</a></p>\r\n        </div>\r\n        <br><br>\r\n    </div>\r\n</div>\r\n<br>"
 
 /***/ }),
 
@@ -583,6 +657,56 @@ var ProjectDetailsComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], ProjectDetailsComponent);
     return ProjectDetailsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/register/register.component.css":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/components/register/register.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <h2>CREATE NEW ACCOUNT</h2>\n  <hr>\n  <form class=\"form-horizontal\" #registerForm=\"ngForm\" (ngSubmit)=\"add();\">\n      <div class=\"form-group\">\n          <label class=\"control-label col-sm-2\" for=\"email\">First Name:</label>\n          <div class=\"col-sm-10\">\n              <input type=\"name\" class=\"form-control\" id=\"firstName\" placeholder=\"First Name\" name=\"firstName\" [(ngModel)]=\"model.firstName\">\n          </div>\n      </div>\n      <div class=\"form-group\">\n          <label class=\"control-label col-sm-2\" for=\"email\">Last Name:</label>\n          <div class=\"col-sm-10\">\n              <input type=\"name\" class=\"form-control\" id=\"lastName\" placeholder=\"Last Name\" name=\"lastName\" [(ngModel)]=\"model.lastName\">\n          </div>\n      </div>\n      <div class=\"form-group\">\n          <label class=\"control-label col-sm-2\" for=\"email\">User Name:</label>\n          <div class=\"col-sm-10\">\n              <input type=\"name\" class=\"form-control\" id=\"userName\" placeholder=\"User Name\" name=\"username\" [(ngModel)]=\"model.username\">\n          </div>\n      </div>\n      <div class=\"form-group\">\n          <label class=\"control-label col-sm-2\" for=\"email\">Email:</label>\n          <div class=\"col-sm-10\">\n              <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Enter email\" name=\"email\" [(ngModel)]=\"model.email\">\n          </div>\n      </div>\n      <div class=\"form-group\">\n          <label class=\"control-label col-sm-2\" for=\"pwd\">Password:</label>\n          <div class=\"col-sm-10\">\n              <input type=\"password\" class=\"form-control\" id=\"pwd\" placeholder=\"Enter password\" name=\"password\" [(ngModel)]=\"model.password\">\n          </div>\n      </div>\n      <div class=\"form-group\">\n          <div class=\"col-sm-offset-2 col-sm-10\">\n              <button type=\"submit\" class=\"btn btn-primary\">SUBMIT</button>\n          </div>\n      </div>\n  </form>\n</div>\n<br>"
+
+/***/ }),
+
+/***/ "./src/app/components/register/register.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var RegisterComponent = /** @class */ (function () {
+    function RegisterComponent() {
+    }
+    RegisterComponent.prototype.ngOnInit = function () {
+    };
+    RegisterComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-register',
+            template: __webpack_require__("./src/app/components/register/register.component.html"),
+            styles: [__webpack_require__("./src/app/components/register/register.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], RegisterComponent);
+    return RegisterComponent;
 }());
 
 
