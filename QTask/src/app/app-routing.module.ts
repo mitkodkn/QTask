@@ -9,6 +9,7 @@ import { ProjectDetailsComponent } from './components/project-details/project-de
 import { RegisterComponent } from './components/register/register.component';
 import { CreateTaskComponent } from './components/create-task/create-task.component';
 import { EditTaskComponent } from './components/edit-task/edit-task.component';
+import { MyPendingTasksComponent } from './components/my-pending-tasks/my-pending-tasks.component';
 
 const routes: Routes = [
   {
@@ -47,6 +48,10 @@ const routes: Routes = [
   {
     "path": 'edit-task',
     component: EditTaskComponent
+  },
+  {
+    "path": 'my-pending-tasks',
+    component: MyPendingTasksComponent
   }
 ];
 
