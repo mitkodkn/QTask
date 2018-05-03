@@ -15,7 +15,6 @@ namespace QTask.Models
 
         public string ManagerId { get; set; }
 
-        //[ForeignKey("ManagerId")]
         public virtual ApplicationUser Manager { get; set; }
 
         public virtual List<Task> Tasks { get; set; }

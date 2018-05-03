@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using QTask.Models;
 
 namespace QTask.Controllers
 {
+    [Authorize]
     [Produces("application/json")]
     [Route("api/[controller]")]
     public class ProjectController : Controller
@@ -21,10 +23,12 @@ namespace QTask.Controllers
         [HttpGet]
         public IEnumerable<Project> Get()
         {
-            return _context.Projects
-                .Include(project => project.Tasks)
-                .Include(project => project.Manager)
+            var projects = _context.Projects
+                .Include(p => p.Tasks)
+                .Include(p => p.Manager)
                 .ToList();
+
+            return projects;
         }
 
         // GET: api/Project/5
@@ -33,6 +37,7 @@ namespace QTask.Controllers
         {
             var project = _context.Projects
                 .Include(p => p.Tasks)
+                .Include(p => p.Manager)
                 .FirstOrDefault(t => t.ProjectId == id);
 
             if (project == null)
@@ -66,7 +71,7 @@ namespace QTask.Controllers
 
             foundProject.Name = project.Name;
             foundProject.Description = project.Description;
-            //foundProject.Id = project.ManagerId;
+            foundProject.ManagerId = project.ManagerId;
 
             _context.Projects.Update(foundProject);
             _context.SaveChanges();
