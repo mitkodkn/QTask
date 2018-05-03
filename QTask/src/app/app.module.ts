@@ -17,6 +17,7 @@ import { CreateTaskComponent } from './components/create-task/create-task.compon
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
 import { RegisterComponent } from './components/register/register.component';
 import { EditTaskComponent } from './components/edit-task/edit-task.component';
+import { MyPendingTasksComponent } from './components/my-pending-tasks/my-pending-tasks.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { EditTaskComponent } from './components/edit-task/edit-task.component';
     CreateTaskComponent,
     ProjectDetailsComponent,
     RegisterComponent,
-    EditTaskComponent
+    EditTaskComponent,
+    MyPendingTasksComponent
   ],
   imports: [
     BrowserModule,

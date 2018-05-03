@@ -3,10 +3,12 @@
       <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li><a routerLink="/home"><span></span> HOME</a></li>
-                    <li *ngIf="isLoggedIn()"><a routerLink="/create-project"><span class="ICON-CLASS"></span> CREATE PROJECT</a></li>
+                    <li *ngIf="isLoggedIn()"><a routerLink="/my-project"> MY PROJECTS</a></li>
+                    <li *ngIf="isLoggedIn()"><a routerLink="/my-pending-tasks"> MY PENDING TASKS</a></li>
                 </ul>
           <ul class="nav navbar-nav navbar-right">
-              <li *ngIf="isLoggedIn()"><a routerLink="/my-project"><span class="glyphicon glyphicon-th"></span> MY PROJECTS</a></li>
+              <li *ngIf="false"><a routerLink="/register"> CREATE USER ACCOUNT</a></li>
+              <li *ngIf="isLoggedIn()"><a routerLink="/create-project"> CREATE PROJECT</a></li>
               <li *ngIf="isLoggedIn()"><a (click)="logout()" routerLink="/home"><span class="glyphicon glyphicon-log-out"></span> LOGOUT</a></li>
               <li *ngIf="!isLoggedIn()"><a routerLink="/login"><span class="glyphicon glyphicon-log-in" ></span> LOGIN</a></li>
               <li *ngIf="!isLoggedIn()"><a routerLink="/register"><span class="glyphicon glyphicon-lock"></span> REGISTER</a></li>
