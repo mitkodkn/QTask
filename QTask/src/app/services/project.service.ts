@@ -25,13 +25,17 @@ export class ProjectService {
     }
 
     createProject(project: Project): any {
+        var user = JSON.parse(localStorage.getItem('currentUser'));
+        project.managerId = user.id;
+
         return this.http
-            .post('/api/project', JSON.stringify(project), this.options)
+            .post('/api/project', project, this.options)
             .toPromise()
             .then(response => {
+                console.log(response.json());
                 this.router.navigateByUrl('/home');
                 alert("You have created project successfully.");
-                response.json().data;
+                response.json();
             })
             .catch(er => alert(JSON.parse(er._body).error));
     }
@@ -41,12 +45,10 @@ export class ProjectService {
              .get('/api/project', this.options)
              .toPromise()
              .then(response =>{
-               //  this.router.navigateByUrl('/jobs');
-                 alert("You have created project successfully.");
                  console.log(response);
-                 return response.json().data;
+                 return response.json();
              })
-             .catch(er => alert(JSON.parse(er._body).error));
+             .catch(() => alert("An error has occurred!"));
     }
 
     getProject(id: number) {

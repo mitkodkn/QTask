@@ -7,7 +7,6 @@ using QTask.Models;
 
 namespace QTask.Controllers
 {
-    [Authorize]
     [Produces("application/json")]
     [Route("api/[controller]")]
     public class ProjectController : Controller
