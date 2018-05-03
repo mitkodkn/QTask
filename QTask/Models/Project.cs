@@ -13,10 +13,10 @@ namespace QTask.Models
 
         public long ProjectId { get; set; }
 
-        //public string ManagerId { get; set; }
+        public string ManagerId { get; set; }
 
         //[ForeignKey("ManagerId")]
-        //public virtual ApplicationUser Manager { get; set; }
+        public virtual ApplicationUser Manager { get; set; }
 
         public virtual List<Task> Tasks { get; set; }
     }

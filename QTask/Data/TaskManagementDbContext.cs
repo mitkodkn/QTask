@@ -25,10 +25,20 @@ namespace QTask.Models
                 .HasMany(project => project.Tasks)
                 .WithOne(task => task.Project)
                 .HasForeignKey(task => task.ProjectId);
+
+            modelBuilder.Entity<ApplicationUser>()
+                .HasMany(user => user.Projects)
+                .WithOne(project => project.Manager)
+                .HasForeignKey(project => project.ManagerId);
+
+            modelBuilder.Entity<Project>()
+                .HasOne(project => project.Manager)
+                .WithMany(user => user.Projects)
+                .HasForeignKey(project => project.ManagerId);
         }
 
         public DbSet<Task> Tasks { get; set; }
         public DbSet<Project> Projects { get; set; }
-        //public DbSet<ApplicationUser> Managers { get; set; }
+        public DbSet<ApplicationUser> Users { get; set; }
     }
 }

@@ -14,7 +14,6 @@ namespace QTask.Models
 
         public long ProjectId { get; set; }
 
-        //[ForeignKey("ProjectId")]
         public virtual Project Project { get; set; }
     }
 }

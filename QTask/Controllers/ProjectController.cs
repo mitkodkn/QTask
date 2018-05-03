@@ -23,6 +23,7 @@ namespace QTask.Controllers
         {
             return _context.Projects
                 .Include(project => project.Tasks)
+                .Include(project => project.Manager)
                 .ToList();
         }
 

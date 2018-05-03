@@ -9,6 +9,6 @@ namespace QTask.Models
 {
     public class ApplicationUser : IdentityUser
     {
-        //public virtual List<Project> Projects { get; set; }
+        public virtual List<Project> Projects { get; set; }
     }
 }
