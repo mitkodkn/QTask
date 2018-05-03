@@ -16,7 +16,7 @@ export class MyProjectsComponent implements OnInit {
       this.getProjects();
     }
 
-    async getProjects(): void {
+    async getProjects() {
         this.projects = await this.projectService.getProjects();
     }
 }

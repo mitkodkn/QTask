@@ -18,28 +18,39 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /***/ }),
 
 /***/ "./src/app/app-routing.module.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppRoutingModule; });
+/* unused harmony export routedComponents */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_home_home_component__ = __webpack_require__("./src/app/components/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_login_login_component__ = __webpack_require__("./src/app/components/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_create_project_create_project_component__ = __webpack_require__("./src/app/components/create-project/create-project.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_my_projects_my_projects_component__ = __webpack_require__("./src/app/components/my-projects/my-projects.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_project_details_project_details_component__ = __webpack_require__("./src/app/components/project-details/project-details.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_register_register_component__ = __webpack_require__("./src/app/components/register/register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_create_task_create_task_component__ = __webpack_require__("./src/app/components/create-task/create-task.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_edit_task_edit_task_component__ = __webpack_require__("./src/app/components/edit-task/edit-task.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_my_pending_tasks_my_pending_tasks_component__ = __webpack_require__("./src/app/components/my-pending-tasks/my-pending-tasks.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-var home_component_1 = __webpack_require__("./src/app/components/home/home.component.ts");
-var login_component_1 = __webpack_require__("./src/app/components/login/login.component.ts");
-var create_project_component_1 = __webpack_require__("./src/app/components/create-project/create-project.component.ts");
-var my_projects_component_1 = __webpack_require__("./src/app/components/my-projects/my-projects.component.ts");
-var project_details_component_1 = __webpack_require__("./src/app/components/project-details/project-details.component.ts");
-var register_component_1 = __webpack_require__("./src/app/components/register/register.component.ts");
-var create_task_component_1 = __webpack_require__("./src/app/components/create-task/create-task.component.ts");
-var edit_task_component_1 = __webpack_require__("./src/app/components/edit-task/edit-task.component.ts");
-var my_pending_tasks_component_1 = __webpack_require__("./src/app/components/my-pending-tasks/my-pending-tasks.component.ts");
+
+
+
+
+
+
+
+
+
+
+
 var routes = [
     {
         "path": '',
@@ -48,54 +59,54 @@ var routes = [
     },
     {
         "path": 'home',
-        component: home_component_1.HomeComponent,
+        component: __WEBPACK_IMPORTED_MODULE_2__components_home_home_component__["a" /* HomeComponent */],
     },
     {
         "path": 'login',
-        component: login_component_1.LoginComponent
+        component: __WEBPACK_IMPORTED_MODULE_3__components_login_login_component__["a" /* LoginComponent */]
     },
     {
         "path": 'create-project',
-        component: create_project_component_1.CreateProjectComponent
+        component: __WEBPACK_IMPORTED_MODULE_4__components_create_project_create_project_component__["a" /* CreateProjectComponent */]
     },
     {
         "path": 'my-project',
-        component: my_projects_component_1.MyProjectsComponent
+        component: __WEBPACK_IMPORTED_MODULE_5__components_my_projects_my_projects_component__["a" /* MyProjectsComponent */]
     },
     {
         "path": 'project-details',
-        component: project_details_component_1.ProjectDetailsComponent
+        component: __WEBPACK_IMPORTED_MODULE_6__components_project_details_project_details_component__["a" /* ProjectDetailsComponent */]
     },
     {
         "path": 'register',
-        component: register_component_1.RegisterComponent
+        component: __WEBPACK_IMPORTED_MODULE_7__components_register_register_component__["a" /* RegisterComponent */]
     },
     {
         "path": 'create-task',
-        component: create_task_component_1.CreateTaskComponent
+        component: __WEBPACK_IMPORTED_MODULE_8__components_create_task_create_task_component__["a" /* CreateTaskComponent */]
     },
     {
         "path": 'edit-task',
-        component: edit_task_component_1.EditTaskComponent
+        component: __WEBPACK_IMPORTED_MODULE_9__components_edit_task_edit_task_component__["a" /* EditTaskComponent */]
     },
     {
         "path": 'my-pending-tasks',
-        component: my_pending_tasks_component_1.MyPendingTasksComponent
+        component: __WEBPACK_IMPORTED_MODULE_10__components_my_pending_tasks_my_pending_tasks_component__["a" /* MyPendingTasksComponent */]
     }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
     AppRoutingModule = __decorate([
-        core_1.NgModule({
-            imports: [router_1.RouterModule.forRoot(routes)],
-            exports: [router_1.RouterModule]
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+            imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forRoot(routes)],
+            exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */]]
         })
     ], AppRoutingModule);
     return AppRoutingModule;
 }());
-exports.AppRoutingModule = AppRoutingModule;
-exports.routedComponents = [home_component_1.HomeComponent, login_component_1.LoginComponent, create_project_component_1.CreateProjectComponent];
+
+var routedComponents = [__WEBPACK_IMPORTED_MODULE_2__components_home_home_component__["a" /* HomeComponent */], __WEBPACK_IMPORTED_MODULE_3__components_login_login_component__["a" /* LoginComponent */], __WEBPACK_IMPORTED_MODULE_4__components_create_project_create_project_component__["a" /* CreateProjectComponent */]];
 
 
 /***/ }),
@@ -115,24 +126,24 @@ module.exports = "<app-navigation></app-navigation>\r\n<router-outlet></router-o
 /***/ }),
 
 /***/ "./src/app/app.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.title = 'app';
     }
     AppComponent = __decorate([
-        core_1.Component({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-root',
             template: __webpack_require__("./src/app/app.component.html"),
             styles: [__webpack_require__("./src/app/app.component.css")]
@@ -140,72 +151,89 @@ var AppComponent = /** @class */ (function () {
     ], AppComponent);
     return AppComponent;
 }());
-exports.AppComponent = AppComponent;
+
 
 
 /***/ }),
 
 /***/ "./src/app/app.module.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_routing_module__ = __webpack_require__("./src/app/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("./src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_navigation_navigation_component__ = __webpack_require__("./src/app/components/navigation/navigation.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_create_project_create_project_component__ = __webpack_require__("./src/app/components/create-project/create-project.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_home_home_component__ = __webpack_require__("./src/app/components/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_login_login_component__ = __webpack_require__("./src/app/components/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_my_projects_my_projects_component__ = __webpack_require__("./src/app/components/my-projects/my-projects.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_project_service__ = __webpack_require__("./src/app/services/project.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_create_task_create_task_component__ = __webpack_require__("./src/app/components/create-task/create-task.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_project_details_project_details_component__ = __webpack_require__("./src/app/components/project-details/project-details.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_register_register_component__ = __webpack_require__("./src/app/components/register/register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_edit_task_edit_task_component__ = __webpack_require__("./src/app/components/edit-task/edit-task.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_my_pending_tasks_my_pending_tasks_component__ = __webpack_require__("./src/app/components/my-pending-tasks/my-pending-tasks.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var platform_browser_1 = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
-var forms_1 = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
-var http_1 = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var app_routing_module_1 = __webpack_require__("./src/app/app-routing.module.ts");
-var app_component_1 = __webpack_require__("./src/app/app.component.ts");
-var navigation_component_1 = __webpack_require__("./src/app/components/navigation/navigation.component.ts");
-var create_project_component_1 = __webpack_require__("./src/app/components/create-project/create-project.component.ts");
-var home_component_1 = __webpack_require__("./src/app/components/home/home.component.ts");
-var login_component_1 = __webpack_require__("./src/app/components/login/login.component.ts");
-var my_projects_component_1 = __webpack_require__("./src/app/components/my-projects/my-projects.component.ts");
-var auth_service_1 = __webpack_require__("./src/app/services/auth.service.ts");
-var project_service_1 = __webpack_require__("./src/app/services/project.service.ts");
-var create_task_component_1 = __webpack_require__("./src/app/components/create-task/create-task.component.ts");
-var project_details_component_1 = __webpack_require__("./src/app/components/project-details/project-details.component.ts");
-var register_component_1 = __webpack_require__("./src/app/components/register/register.component.ts");
-var edit_task_component_1 = __webpack_require__("./src/app/components/edit-task/edit-task.component.ts");
-var my_pending_tasks_component_1 = __webpack_require__("./src/app/components/my-pending-tasks/my-pending-tasks.component.ts");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        core_1.NgModule({
+        Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["I" /* NgModule */])({
             declarations: [
-                app_component_1.AppComponent,
-                navigation_component_1.NavigationComponent,
-                create_project_component_1.CreateProjectComponent,
-                home_component_1.HomeComponent,
-                login_component_1.LoginComponent,
-                my_projects_component_1.MyProjectsComponent,
-                create_task_component_1.CreateTaskComponent,
-                project_details_component_1.ProjectDetailsComponent,
-                register_component_1.RegisterComponent,
-                edit_task_component_1.EditTaskComponent,
-                my_pending_tasks_component_1.MyPendingTasksComponent
+                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_6__components_navigation_navigation_component__["a" /* NavigationComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__components_create_project_create_project_component__["a" /* CreateProjectComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__components_home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__components_login_login_component__["a" /* LoginComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__components_my_projects_my_projects_component__["a" /* MyProjectsComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__components_create_task_create_task_component__["a" /* CreateTaskComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__components_project_details_project_details_component__["a" /* ProjectDetailsComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__components_register_register_component__["a" /* RegisterComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__components_edit_task_edit_task_component__["a" /* EditTaskComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__components_my_pending_tasks_my_pending_tasks_component__["a" /* MyPendingTasksComponent */]
             ],
             imports: [
-                platform_browser_1.BrowserModule,
-                forms_1.FormsModule,
-                http_1.HttpModule,
-                app_routing_module_1.AppRoutingModule
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_4__app_routing_module__["a" /* AppRoutingModule */]
             ],
-            providers: [auth_service_1.AuthenticationService, project_service_1.ProjectService],
-            bootstrap: [app_component_1.AppComponent]
+            providers: [__WEBPACK_IMPORTED_MODULE_11__services_auth_service__["a" /* AuthenticationService */], __WEBPACK_IMPORTED_MODULE_12__services_project_service__["a" /* ProjectService */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
 }());
-exports.AppModule = AppModule;
+
 
 
 /***/ }),
@@ -225,10 +253,13 @@ module.exports = "<div class=\"container\">\r\n    <h2>CREATE NEW PROJECT</h2>\r
 /***/ }),
 
 /***/ "./src/app/components/create-project/create-project.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreateProjectComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_project_service__ = __webpack_require__("./src/app/services/project.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_project__ = __webpack_require__("./src/app/models/project.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -238,31 +269,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var project_service_1 = __webpack_require__("./src/app/services/project.service.ts");
-var project_1 = __webpack_require__("./src/app/models/project.ts");
+
+
+
 var CreateProjectComponent = /** @class */ (function () {
     function CreateProjectComponent(projectService) {
         this.projectService = projectService;
     }
     CreateProjectComponent.prototype.ngOnInit = function () {
-        this.project = new project_1.Project('', '');
+        this.project = new __WEBPACK_IMPORTED_MODULE_2__models_project__["a" /* Project */]('', '', 1);
     };
     CreateProjectComponent.prototype.createProject = function () {
         this.projectService.createProject(this.project);
     };
     CreateProjectComponent = __decorate([
-        core_1.Component({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-create-project',
             template: __webpack_require__("./src/app/components/create-project/create-project.component.html"),
             styles: [__webpack_require__("./src/app/components/create-project/create-project.component.css")]
         }),
-        __metadata("design:paramtypes", [project_service_1.ProjectService])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_project_service__["a" /* ProjectService */]])
     ], CreateProjectComponent);
     return CreateProjectComponent;
 }());
-exports.CreateProjectComponent = CreateProjectComponent;
+
 
 
 /***/ }),
@@ -282,10 +312,13 @@ module.exports = "<div class=\"container\">\r\n    <h2>CREATE TASK</h2>\r\n    <
 /***/ }),
 
 /***/ "./src/app/components/create-task/create-task.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CreateTaskComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_task__ = __webpack_require__("./src/app/models/task.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_task_service__ = __webpack_require__("./src/app/services/task.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -295,15 +328,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var task_1 = __webpack_require__("./src/app/models/task.ts");
-var user_1 = __webpack_require__("./src/app/models/user.ts");
-var task_service_1 = __webpack_require__("./src/app/services/task.service.ts");
+
+
+
 var CreateTaskComponent = /** @class */ (function () {
     function CreateTaskComponent(taskService) {
         this.taskService = taskService;
-        this.task = new task_1.Task('', '', '', new user_1.User('', '', '', '', ''), new user_1.User('', '', '', '', ''));
+        this.task = new __WEBPACK_IMPORTED_MODULE_1__models_task__["a" /* Task */]('', '', '', 1, 1);
     }
     CreateTaskComponent.prototype.ngOnInit = function () {
     };
@@ -311,16 +342,16 @@ var CreateTaskComponent = /** @class */ (function () {
         this.taskService.createTask(this.task);
     };
     CreateTaskComponent = __decorate([
-        core_1.Component({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-create-task',
             template: __webpack_require__("./src/app/components/create-task/create-task.component.html"),
             styles: [__webpack_require__("./src/app/components/create-task/create-task.component.css")]
         }),
-        __metadata("design:paramtypes", [task_service_1.TaskService])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_task_service__["a" /* TaskService */]])
     ], CreateTaskComponent);
     return CreateTaskComponent;
 }());
-exports.CreateTaskComponent = CreateTaskComponent;
+
 
 
 /***/ }),
@@ -340,10 +371,12 @@ module.exports = "<div class=\"container\">\r\n    <h2>EDIT TASK</h2>\r\n    <hr
 /***/ }),
 
 /***/ "./src/app/components/edit-task/edit-task.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditTaskComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_task_service__ = __webpack_require__("./src/app/services/task.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -353,9 +386,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var task_service_1 = __webpack_require__("./src/app/services/task.service.ts");
+
+
 var EditTaskComponent = /** @class */ (function () {
     function EditTaskComponent(taskService) {
         this.taskService = taskService;
@@ -370,16 +402,16 @@ var EditTaskComponent = /** @class */ (function () {
         this.taskService.updateTask(this.task);
     };
     EditTaskComponent = __decorate([
-        core_1.Component({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-edit-task',
             template: __webpack_require__("./src/app/components/edit-task/edit-task.component.html"),
             styles: [__webpack_require__("./src/app/components/edit-task/edit-task.component.css")]
         }),
-        __metadata("design:paramtypes", [task_service_1.TaskService])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_task_service__["a" /* TaskService */]])
     ], EditTaskComponent);
     return EditTaskComponent;
 }());
-exports.EditTaskComponent = EditTaskComponent;
+
 
 
 /***/ }),
@@ -399,10 +431,11 @@ module.exports = "<header class=\"masthead\">\r\n  <div class=\"container\">\r\n
 /***/ }),
 
 /***/ "./src/app/components/home/home.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -412,15 +445,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+
 var HomeComponent = /** @class */ (function () {
     function HomeComponent() {
     }
     HomeComponent.prototype.ngOnInit = function () {
     };
     HomeComponent = __decorate([
-        core_1.Component({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-home',
             template: __webpack_require__("./src/app/components/home/home.component.html"),
             styles: [__webpack_require__("./src/app/components/home/home.component.css")]
@@ -429,7 +461,7 @@ var HomeComponent = /** @class */ (function () {
     ], HomeComponent);
     return HomeComponent;
 }());
-exports.HomeComponent = HomeComponent;
+
 
 
 /***/ }),
@@ -444,15 +476,18 @@ module.exports = "h2 {\r\n    text-align: center;\r\n    margin-bottom: 30px;\r\
 /***/ "./src/app/components/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <h2>LOGIN</h2>\r\n    <hr>\r\n    <form class=\"form-horizontal\" #loginForm=\"ngForm\" (ngSubmit)=\"login();\">\r\n        <div class=\"form-group\">\r\n            <label class=\"control-label col-sm-2\" for=\"email\">User Name:</label>\r\n            <div class=\"col-sm-10\">\r\n                <input type=\"name\" class=\"form-control\" id=\"userName\" placeholder=\"User Name\" name=\"username\" [(ngModel)]=\"model.username\">\r\n            </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label class=\"control-label col-sm-2\" for=\"pwd\">Password:</label>\r\n            <div class=\"col-sm-10\">\r\n                <input type=\"password\" class=\"form-control\" id=\"pwd\" placeholder=\"Enter password\" name=\"password\" [(ngModel)]=\"model.passwordHash\">\r\n            </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <div class=\"col-sm-offset-2 col-sm-10\">\r\n                <button type=\"submit\" class=\"btn btn-primary\">SUBMIT</button>\r\n            </div>\r\n        </div>\r\n    </form>\r\n</div>\r\n<br>"
+module.exports = "<div class=\"container\">\r\n    <h2>LOGIN</h2>\r\n    <hr>\r\n    <form class=\"form-horizontal\" #loginForm=\"ngForm\" (ngSubmit)=\"login();\">\r\n        <div class=\"form-group\">\r\n            <label class=\"control-label col-sm-2\" for=\"email\">Email:</label>\r\n            <div class=\"col-sm-10\">\r\n                <input type=\"name\" class=\"form-control\" id=\"email\" placeholder=\"Email\" name=\"email\" [(ngModel)]=\"model.email\">\r\n            </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <label class=\"control-label col-sm-2\" for=\"pwd\">Password:</label>\r\n            <div class=\"col-sm-10\">\r\n                <input type=\"password\" class=\"form-control\" id=\"pwd\" placeholder=\"Enter password\" name=\"password\" [(ngModel)]=\"model.passwordHash\">\r\n            </div>\r\n        </div>\r\n        <div class=\"form-group\">\r\n            <div class=\"col-sm-offset-2 col-sm-10\">\r\n                <button type=\"submit\" class=\"btn btn-primary\">SUBMIT</button>\r\n            </div>\r\n        </div>\r\n    </form>\r\n</div>\r\n<br>"
 
 /***/ }),
 
 /***/ "./src/app/components/login/login.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_user__ = __webpack_require__("./src/app/models/user.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -462,31 +497,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var auth_service_1 = __webpack_require__("./src/app/services/auth.service.ts");
-var user_1 = __webpack_require__("./src/app/models/user.ts");
+
+
+
 var LoginComponent = /** @class */ (function () {
     function LoginComponent(authenticationService) {
         this.authenticationService = authenticationService;
     }
     LoginComponent.prototype.ngOnInit = function () {
-        this.model = new user_1.User('', '', '', '', '');
+        this.model = new __WEBPACK_IMPORTED_MODULE_2__models_user__["a" /* User */]('', '');
     };
     LoginComponent.prototype.login = function () {
-        this.authenticationService.login(this.model.username, this.model.passwordHash);
+        this.authenticationService.login(this.model.email, this.model.password);
     };
     LoginComponent = __decorate([
-        core_1.Component({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-login',
             template: __webpack_require__("./src/app/components/login/login.component.html"),
             styles: [__webpack_require__("./src/app/components/login/login.component.css")]
         }),
-        __metadata("design:paramtypes", [auth_service_1.AuthenticationService])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthenticationService */]])
     ], LoginComponent);
     return LoginComponent;
 }());
-exports.LoginComponent = LoginComponent;
+
 
 
 /***/ }),
@@ -506,10 +540,11 @@ module.exports = "<div class=\"container\">\r\n\t<div class=\"row\">\r\n\r\n\t\t
 /***/ }),
 
 /***/ "./src/app/components/my-pending-tasks/my-pending-tasks.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyPendingTasksComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -519,15 +554,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+
 var MyPendingTasksComponent = /** @class */ (function () {
     function MyPendingTasksComponent() {
     }
     MyPendingTasksComponent.prototype.ngOnInit = function () {
     };
     MyPendingTasksComponent = __decorate([
-        core_1.Component({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-my-pending-tasks',
             template: __webpack_require__("./src/app/components/my-pending-tasks/my-pending-tasks.component.html"),
             styles: [__webpack_require__("./src/app/components/my-pending-tasks/my-pending-tasks.component.css")]
@@ -536,7 +570,7 @@ var MyPendingTasksComponent = /** @class */ (function () {
     ], MyPendingTasksComponent);
     return MyPendingTasksComponent;
 }());
-exports.MyPendingTasksComponent = MyPendingTasksComponent;
+
 
 
 /***/ }),
@@ -556,10 +590,12 @@ module.exports = "    <!-- Page Content -->\r\n    <div class=\"container\">\r\n
 /***/ }),
 
 /***/ "./src/app/components/my-projects/my-projects.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyProjectsComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_project_service__ = __webpack_require__("./src/app/services/project.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -604,9 +640,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var project_service_1 = __webpack_require__("./src/app/services/project.service.ts");
+
+
 var MyProjectsComponent = /** @class */ (function () {
     function MyProjectsComponent(projectService) {
         this.projectService = projectService;
@@ -630,16 +665,16 @@ var MyProjectsComponent = /** @class */ (function () {
         });
     };
     MyProjectsComponent = __decorate([
-        core_1.Component({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-my-projects',
             template: __webpack_require__("./src/app/components/my-projects/my-projects.component.html"),
             styles: [__webpack_require__("./src/app/components/my-projects/my-projects.component.css")]
         }),
-        __metadata("design:paramtypes", [project_service_1.ProjectService])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_project_service__["a" /* ProjectService */]])
     ], MyProjectsComponent);
     return MyProjectsComponent;
 }());
-exports.MyProjectsComponent = MyProjectsComponent;
+
 
 
 /***/ }),
@@ -659,10 +694,12 @@ module.exports = "<nav class=\"navbar navbar-inverse navbar-fixed-top\">\r\n  <d
 /***/ }),
 
 /***/ "./src/app/components/navigation/navigation.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavigationComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -672,9 +709,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var auth_service_1 = __webpack_require__("./src/app/services/auth.service.ts");
+
+
 var NavigationComponent = /** @class */ (function () {
     function NavigationComponent(authService) {
         this.authService = authService;
@@ -688,16 +724,16 @@ var NavigationComponent = /** @class */ (function () {
         this.authService.logout();
     };
     NavigationComponent = __decorate([
-        core_1.Component({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-navigation',
             template: __webpack_require__("./src/app/components/navigation/navigation.component.html"),
             styles: [__webpack_require__("./src/app/components/navigation/navigation.component.css")]
         }),
-        __metadata("design:paramtypes", [auth_service_1.AuthenticationService])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthenticationService */]])
     ], NavigationComponent);
     return NavigationComponent;
 }());
-exports.NavigationComponent = NavigationComponent;
+
 
 
 /***/ }),
@@ -717,10 +753,12 @@ module.exports = "<div class=\"container\">\r\n    <div class=\"row\">\r\n      
 /***/ }),
 
 /***/ "./src/app/components/project-details/project-details.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProjectDetailsComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_project_service__ = __webpack_require__("./src/app/services/project.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -730,9 +768,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var project_service_1 = __webpack_require__("./src/app/services/project.service.ts");
+
+
 var ProjectDetailsComponent = /** @class */ (function () {
     function ProjectDetailsComponent(projectService) {
         this.projectService = projectService;
@@ -744,16 +781,16 @@ var ProjectDetailsComponent = /** @class */ (function () {
         return this.projectService.getProject(id);
     };
     ProjectDetailsComponent = __decorate([
-        core_1.Component({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-project-details',
             template: __webpack_require__("./src/app/components/project-details/project-details.component.html"),
             styles: [__webpack_require__("./src/app/components/project-details/project-details.component.css")]
         }),
-        __metadata("design:paramtypes", [project_service_1.ProjectService])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_project_service__["a" /* ProjectService */]])
     ], ProjectDetailsComponent);
     return ProjectDetailsComponent;
 }());
-exports.ProjectDetailsComponent = ProjectDetailsComponent;
+
 
 
 /***/ }),
@@ -761,22 +798,25 @@ exports.ProjectDetailsComponent = ProjectDetailsComponent;
 /***/ "./src/app/components/register/register.component.css":
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "h2 {\r\n    text-align: center;\r\n    margin-bottom: 30px;\r\n    margin-top: 30px;\r\n}\r\n\r\ninput,\r\nselect {\r\n    width: 85%;\r\n}\r\n\r\nform {\r\n    margin-bottom: 135px;\r\n    margin-top: 5%;\r\n}\r\n\r\n.container {\r\n    margin-top: 50px\r\n}\r\n\r\nspan {\r\n    margin-left: 40px\r\n}"
 
 /***/ }),
 
 /***/ "./src/app/components/register/register.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n  <h2>CREATE NEW ACCOUNT</h2>\r\n  <hr>\r\n  <form class=\"form-horizontal\" #registerForm=\"ngForm\" (ngSubmit)=\"add();\">\r\n      <div class=\"form-group\">\r\n          <label class=\"control-label col-sm-2\" for=\"email\">First Name:</label>\r\n          <div class=\"col-sm-10\">\r\n              <input type=\"name\" class=\"form-control\" id=\"firstName\" placeholder=\"First Name\" name=\"firstName\" [(ngModel)]=\"model.firstName\">\r\n          </div>\r\n      </div>\r\n      <div class=\"form-group\">\r\n          <label class=\"control-label col-sm-2\" for=\"email\">Last Name:</label>\r\n          <div class=\"col-sm-10\">\r\n              <input type=\"name\" class=\"form-control\" id=\"lastName\" placeholder=\"Last Name\" name=\"lastName\" [(ngModel)]=\"model.lastName\">\r\n          </div>\r\n      </div>\r\n      <div class=\"form-group\">\r\n          <label class=\"control-label col-sm-2\" for=\"email\">User Name:</label>\r\n          <div class=\"col-sm-10\">\r\n              <input type=\"name\" class=\"form-control\" id=\"userName\" placeholder=\"User Name\" name=\"username\" [(ngModel)]=\"model.username\">\r\n          </div>\r\n      </div>\r\n      <div class=\"form-group\">\r\n          <label class=\"control-label col-sm-2\" for=\"email\">Email:</label>\r\n          <div class=\"col-sm-10\">\r\n              <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Enter email\" name=\"email\" [(ngModel)]=\"model.email\">\r\n          </div>\r\n      </div>\r\n      <div class=\"form-group\">\r\n          <label class=\"control-label col-sm-2\" for=\"pwd\">Password:</label>\r\n          <div class=\"col-sm-10\">\r\n              <input type=\"password\" class=\"form-control\" id=\"pwd\" placeholder=\"Enter password\" name=\"password\" [(ngModel)]=\"model.passHash\">\r\n          </div>\r\n      </div>\r\n      <div class=\"form-group\">\r\n          <div class=\"col-sm-offset-2 col-sm-10\">\r\n              <button type=\"submit\" class=\"btn btn-primary\">SUBMIT</button>\r\n          </div>\r\n      </div>\r\n  </form>\r\n</div>\r\n<br>"
+module.exports = "<div class=\"container\">\r\n  <h2>CREATE NEW ACCOUNT</h2>\r\n  <hr>\r\n  <form class=\"form-horizontal\" #registerForm=\"ngForm\" (ngSubmit)=\"add();\">\r\n      <div class=\"form-group\">\r\n          <label class=\"control-label col-sm-2\" for=\"email\">Email:</label>\r\n          <div class=\"col-sm-10\">\r\n              <input type=\"email\" class=\"form-control\" id=\"email\" placeholder=\"Enter email\" name=\"email\" [(ngModel)]=\"model.email\">\r\n          </div>\r\n      </div>\r\n      <div class=\"form-group\">\r\n          <label class=\"control-label col-sm-2\" for=\"pwd\">Password:</label>\r\n          <div class=\"col-sm-10\">\r\n              <input type=\"password\" class=\"form-control\" id=\"pwd\" placeholder=\"Enter password\" name=\"password\" [(ngModel)]=\"model.passHash\">\r\n          </div>\r\n      </div>\r\n      <div class=\"form-group\">\r\n          <div class=\"col-sm-offset-2 col-sm-10\">\r\n              <button type=\"submit\" class=\"btn btn-primary\">SUBMIT</button>\r\n          </div>\r\n      </div>\r\n  </form>\r\n</div>\r\n<br>"
 
 /***/ }),
 
 /***/ "./src/app/components/register/register.component.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_user__ = __webpack_require__("./src/app/models/user.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("./src/app/services/auth.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -786,41 +826,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var user_1 = __webpack_require__("./src/app/models/user.ts");
-var auth_service_1 = __webpack_require__("./src/app/services/auth.service.ts");
+
+
+
 var RegisterComponent = /** @class */ (function () {
     function RegisterComponent(authService) {
         this.authService = authService;
     }
     RegisterComponent.prototype.ngOnInit = function () {
-        this.model = new user_1.User('', '', '', '', '');
+        this.model = new __WEBPACK_IMPORTED_MODULE_1__models_user__["a" /* User */]('', '');
     };
     RegisterComponent.prototype.add = function () {
         this.authService.register(this.model);
     };
     RegisterComponent = __decorate([
-        core_1.Component({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-register',
             template: __webpack_require__("./src/app/components/register/register.component.html"),
             styles: [__webpack_require__("./src/app/components/register/register.component.css")]
         }),
-        __metadata("design:paramtypes", [auth_service_1.AuthenticationService])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthenticationService */]])
     ], RegisterComponent);
     return RegisterComponent;
 }());
-exports.RegisterComponent = RegisterComponent;
+
 
 
 /***/ }),
 
 /***/ "./src/app/models/project.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Project; });
 var Project = /** @class */ (function () {
     function Project(name, description, managerId) {
         this.name = name;
@@ -829,60 +867,60 @@ var Project = /** @class */ (function () {
     }
     return Project;
 }());
-exports.Project = Project;
+
 
 
 /***/ }),
 
 /***/ "./src/app/models/task.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Task; });
 var Task = /** @class */ (function () {
-    function Task(name, description, state, author, executor) {
+    function Task(name, description, state, authorId, executorId) {
         this.name = name;
         this.description = description;
         this.state = state;
-        this.author = author;
-        this.executor = executor;
+        this.authorId = authorId;
+        this.executorId = executorId;
     }
     ;
     return Task;
 }());
-exports.Task = Task;
+
 
 
 /***/ }),
 
 /***/ "./src/app/models/user.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return User; });
 var User = /** @class */ (function () {
-    function User(firstName, lastName, username, email, passwordHash) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.username = username;
+    function User(email, password) {
         this.email = email;
-        this.passwordHash = passwordHash;
+        this.password = password;
     }
     ;
     return User;
 }());
-exports.User = User;
+
 
 
 /***/ }),
 
 /***/ "./src/app/services/auth.service.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthenticationService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/toPromise.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -892,17 +930,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var http_1 = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
-var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-__webpack_require__("./node_modules/rxjs/_esm5/add/operator/toPromise.js");
+
+
+
+
 var AuthenticationService = /** @class */ (function () {
     function AuthenticationService(http, router) {
         this.http = http;
         this.router = router;
-        this.headers = new http_1.Headers({ 'Content-Type': 'application/json', 'charset': 'UTF-8' });
-        this.options = new http_1.RequestOptions({ headers: this.headers });
+        this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json', 'charset': 'UTF-8' });
+        this.options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: this.headers });
     }
     AuthenticationService.prototype.login = function (username, password) {
         var _this = this;
@@ -946,9 +983,9 @@ var AuthenticationService = /** @class */ (function () {
             .then(function (response) {
             _this.router.navigateByUrl('/login');
             alert("You have registered successfully");
-            response.json().data;
+            return response.json();
         })
-            .catch(function (er) { return alert(JSON.parse(er._body).error); });
+            .catch(function (er) { return console.log(er._body); });
     };
     AuthenticationService.prototype.logout = function () {
         alert("You have successfully logged out");
@@ -963,21 +1000,27 @@ var AuthenticationService = /** @class */ (function () {
         }
     };
     AuthenticationService = __decorate([
-        core_1.Injectable(),
-        __metadata("design:paramtypes", [http_1.Http, router_1.Router])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
     ], AuthenticationService);
     return AuthenticationService;
 }());
-exports.AuthenticationService = AuthenticationService;
+
 
 
 /***/ }),
 
 /***/ "./src/app/services/project.service.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProjectService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/toPromise.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_project__ = __webpack_require__("./src/app/models/project.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -987,27 +1030,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var http_1 = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
-var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-__webpack_require__("./node_modules/rxjs/_esm5/add/operator/toPromise.js");
-var project_1 = __webpack_require__("./src/app/models/project.ts");
+
+
+
+
+
 var ProjectService = /** @class */ (function () {
     function ProjectService(http, router) {
         this.http = http;
         this.router = router;
-        this.headers = new http_1.Headers({ 'Content-Type': 'application/json', 'charset': 'UTF-8' });
-        this.options = new http_1.RequestOptions({ headers: this.headers });
+        this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json', 'charset': 'UTF-8' });
+        this.options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: this.headers });
         this.projects = [
-            new project_1.Project("NEznam1", "asdfasdf"),
-            new project_1.Project("NEznam2", "asdfasdf"),
-            new project_1.Project("NEznam3", "asdfasdf"),
-            new project_1.Project("NEznam4", "asdfasdf"),
-            new project_1.Project("NEznam5", "asdfasdf"),
-            new project_1.Project("NEznam6", "asdfasdf"),
-            new project_1.Project("NEznam7", "asdfasdf"),
-            new project_1.Project("NEznam8", "asdfasdf"),
+            new __WEBPACK_IMPORTED_MODULE_4__models_project__["a" /* Project */]("NEznam1", "asdfasdf", 1),
+            new __WEBPACK_IMPORTED_MODULE_4__models_project__["a" /* Project */]("NEznam2", "asdfasdf", 1),
+            new __WEBPACK_IMPORTED_MODULE_4__models_project__["a" /* Project */]("NEznam3", "asdfasdf", 1),
+            new __WEBPACK_IMPORTED_MODULE_4__models_project__["a" /* Project */]("NEznam4", "asdfasdf", 1),
+            new __WEBPACK_IMPORTED_MODULE_4__models_project__["a" /* Project */]("NEznam5", "asdfasdf", 1),
+            new __WEBPACK_IMPORTED_MODULE_4__models_project__["a" /* Project */]("NEznam6", "asdfasdf", 1),
+            new __WEBPACK_IMPORTED_MODULE_4__models_project__["a" /* Project */]("NEznam7", "asdfasdf", 1),
+            new __WEBPACK_IMPORTED_MODULE_4__models_project__["a" /* Project */]("NEznam8", "asdfasdf", 1),
         ];
     }
     ProjectService.prototype.createProject = function (project) {
@@ -1021,9 +1063,9 @@ var ProjectService = /** @class */ (function () {
             console.log(response.json());
             _this.router.navigateByUrl('/home');
             alert("You have created project successfully.");
-            response.json();
+            return response.json();
         })
-            .catch(function (er) { return alert(JSON.parse(er._body).error); });
+            .catch(function (er) { return console.log(er._body); });
     };
     ProjectService.prototype.getProjects = function () {
         return this.http
@@ -1048,21 +1090,26 @@ var ProjectService = /** @class */ (function () {
             .catch(function (er) { return alert(JSON.parse(er._body).error); });
     };
     ProjectService = __decorate([
-        core_1.Injectable(),
-        __metadata("design:paramtypes", [http_1.Http, router_1.Router])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
     ], ProjectService);
     return ProjectService;
 }());
-exports.ProjectService = ProjectService;
+
 
 
 /***/ }),
 
 /***/ "./src/app/services/task.service.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TaskService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/toPromise.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1072,17 +1119,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var http_1 = __webpack_require__("./node_modules/@angular/http/esm5/http.js");
-var router_1 = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
-__webpack_require__("./node_modules/rxjs/_esm5/add/operator/toPromise.js");
+
+
+
+
 var TaskService = /** @class */ (function () {
     function TaskService(http, router) {
         this.http = http;
         this.router = router;
-        this.headers = new http_1.Headers({ 'Content-Type': 'application/json', 'charset': 'UTF-8' });
-        this.options = new http_1.RequestOptions({ headers: this.headers });
+        this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json', 'charset': 'UTF-8' });
+        this.options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: this.headers });
     }
     TaskService.prototype.getTask = function (id) {
         var _this = this;
@@ -1121,27 +1167,26 @@ var TaskService = /** @class */ (function () {
             .catch(function (er) { return alert(JSON.parse(er._body).error); });
     };
     TaskService = __decorate([
-        core_1.Injectable(),
-        __metadata("design:paramtypes", [http_1.Http, router_1.Router])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */]])
     ], TaskService);
     return TaskService;
 }());
-exports.TaskService = TaskService;
+
 
 
 /***/ }),
 
 /***/ "./src/environments/environment.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
 // The file contents for the current environment will overwrite these during build.
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.environment = {
+var environment = {
     production: false
 };
 
@@ -1149,19 +1194,22 @@ exports.environment = {
 /***/ }),
 
 /***/ "./src/main.ts":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("./node_modules/@angular/platform-browser-dynamic/esm5/platform-browser-dynamic.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("./src/app/app.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("./src/environments/environment.ts");
 
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
-var platform_browser_dynamic_1 = __webpack_require__("./node_modules/@angular/platform-browser-dynamic/esm5/platform-browser-dynamic.js");
-var app_module_1 = __webpack_require__("./src/app/app.module.ts");
-var environment_1 = __webpack_require__("./src/environments/environment.ts");
-if (environment_1.environment.production) {
-    core_1.enableProdMode();
+
+
+
+if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* enableProdMode */])();
 }
-platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule)
+Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
 
 

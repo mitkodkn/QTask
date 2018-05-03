@@ -13,7 +13,7 @@ export class RegisterComponent implements OnInit {
   constructor(private authService: AuthenticationService) { }
 
   ngOnInit(): void {
-    this.model = new User('', '', '', '', '');
+    this.model = new User('', '');
   }
 
   add(): void {

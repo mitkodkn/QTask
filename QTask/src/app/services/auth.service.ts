@@ -58,9 +58,9 @@ export class AuthenticationService {
           .then(response =>{
             this.router.navigateByUrl('/login');
             alert("You have registered successfully");
-            response.json().data 
+            return response.json();
           })
-          .catch(er => alert(JSON.parse(er._body).error));
+          .catch(er => console.log(er._body));
       }
 
     logout(): void {

@@ -4,14 +4,14 @@ export class Task {
     name: string;
     description: string;
     state: string;
-    author: User;
-    executor: User;
+    authorId: number;
+    executorId: number;
 
-    constructor(name: string, description: string, state: string, author: User, executor: User) {
+    constructor(name: string, description: string, state: string, authorId: number, executorId: number) {
         this.name = name;
         this.description = description;
         this.state = state;
-        this.author = author;
-        this.executor = executor;
+        this.authorId = authorId;
+        this.executorId = executorId;
     };
 }

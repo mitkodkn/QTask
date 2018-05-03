@@ -11,14 +11,14 @@ export class ProjectService {
     private options = new RequestOptions({ headers: this.headers });
 
     private projects = [
-        new Project("NEznam1", "asdfasdf"),
-        new Project("NEznam2", "asdfasdf"),
-        new Project("NEznam3", "asdfasdf"),
-        new Project("NEznam4", "asdfasdf"),
-        new Project("NEznam5", "asdfasdf"),
-        new Project("NEznam6", "asdfasdf"),
-        new Project("NEznam7", "asdfasdf"),
-        new Project("NEznam8", "asdfasdf"),
+        new Project("NEznam1", "asdfasdf", 1),
+        new Project("NEznam2", "asdfasdf", 1),
+        new Project("NEznam3", "asdfasdf", 1),
+        new Project("NEznam4", "asdfasdf", 1),
+        new Project("NEznam5", "asdfasdf", 1),
+        new Project("NEznam6", "asdfasdf", 1),
+        new Project("NEznam7", "asdfasdf", 1),
+        new Project("NEznam8", "asdfasdf", 1),
     ] 
 
     constructor(private http: Http, private router: Router) {
@@ -35,9 +35,9 @@ export class ProjectService {
                 console.log(response.json());
                 this.router.navigateByUrl('/home');
                 alert("You have created project successfully.");
-                response.json();
+                return response.json();
             })
-            .catch(er => alert(JSON.parse(er._body).error));
+            .catch(er => console.log(er._body));
     }
 
     getProjects(): any {
