@@ -13,7 +13,9 @@ namespace QTask.Models
         public bool IsCompleted { get; set; }
 
         public long ProjectId { get; set; }
+        public string ExecutorId { get; set; }
 
         public virtual Project Project { get; set; }
+        public virtual ApplicationUser Executor { get; set; }
     }
 }

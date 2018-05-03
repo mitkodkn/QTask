@@ -35,6 +35,16 @@ namespace QTask.Models
                 .HasOne(project => project.Manager)
                 .WithMany(user => user.Projects)
                 .HasForeignKey(project => project.ManagerId);
+
+            modelBuilder.Entity<Task>()
+                .HasOne(task => task.Executor)
+                .WithMany(user => user.Tasks)
+                .HasForeignKey(task => task.ExecutorId);
+
+            modelBuilder.Entity<ApplicationUser>()
+                .HasMany(user => user.Tasks)
+                .WithOne(task => task.Executor)
+                .HasForeignKey(task => task.ExecutorId);
         }
 
         public DbSet<Task> Tasks { get; set; }

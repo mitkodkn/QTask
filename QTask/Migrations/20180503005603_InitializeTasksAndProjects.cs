@@ -5,12 +5,12 @@ using System.Collections.Generic;
 
 namespace QTask.Migrations
 {
-    public partial class Initial : Migration
+    public partial class InitializeTasksAndProjects : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "ApplicationUser",
+                name: "Users",
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
@@ -31,7 +31,7 @@ namespace QTask.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ApplicationUser", x => x.Id);
+                    table.PrimaryKey("PK_Users", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -48,9 +48,9 @@ namespace QTask.Migrations
                 {
                     table.PrimaryKey("PK_Projects", x => x.ProjectId);
                     table.ForeignKey(
-                        name: "FK_Projects_ApplicationUser_ManagerId",
+                        name: "FK_Projects_Users_ManagerId",
                         column: x => x.ManagerId,
-                        principalTable: "ApplicationUser",
+                        principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -61,6 +61,7 @@ namespace QTask.Migrations
                 {
                     TaskId = table.Column<long>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    ExecutorId = table.Column<string>(nullable: true),
                     IsCompleted = table.Column<bool>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     ProjectId = table.Column<long>(nullable: false)
@@ -68,6 +69,12 @@ namespace QTask.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Tasks", x => x.TaskId);
+                    table.ForeignKey(
+                        name: "FK_Tasks_Users_ExecutorId",
+                        column: x => x.ExecutorId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Tasks_Projects_ProjectId",
                         column: x => x.ProjectId,
@@ -80,6 +87,11 @@ namespace QTask.Migrations
                 name: "IX_Projects_ManagerId",
                 table: "Projects",
                 column: "ManagerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Tasks_ExecutorId",
+                table: "Tasks",
+                column: "ExecutorId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Tasks_ProjectId",
@@ -96,7 +108,7 @@ namespace QTask.Migrations
                 name: "Projects");
 
             migrationBuilder.DropTable(
-                name: "ApplicationUser");
+                name: "Users");
         }
     }
 }

@@ -11,8 +11,8 @@ using System;
 namespace QTask.Migrations
 {
     [DbContext(typeof(TaskManagementDbContext))]
-    [Migration("20180502235404_UpdateContext")]
-    partial class UpdateContext
+    [Migration("20180503005603_InitializeTasksAndProjects")]
+    partial class InitializeTasksAndProjects
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -82,6 +82,8 @@ namespace QTask.Migrations
                     b.Property<long>("TaskId")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("ExecutorId");
+
                     b.Property<bool>("IsCompleted");
 
                     b.Property<string>("Name");
@@ -89,6 +91,8 @@ namespace QTask.Migrations
                     b.Property<long>("ProjectId");
 
                     b.HasKey("TaskId");
+
+                    b.HasIndex("ExecutorId");
 
                     b.HasIndex("ProjectId");
 
@@ -104,6 +108,10 @@ namespace QTask.Migrations
 
             modelBuilder.Entity("QTask.Models.Task", b =>
                 {
+                    b.HasOne("QTask.Models.ApplicationUser", "Executor")
+                        .WithMany("Tasks")
+                        .HasForeignKey("ExecutorId");
+
                     b.HasOne("QTask.Models.Project", "Project")
                         .WithMany("Tasks")
                         .HasForeignKey("ProjectId")

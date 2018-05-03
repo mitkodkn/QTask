@@ -32,5 +32,6 @@ namespace QTask.Models
         public override string NormalizedEmail { get => base.NormalizedEmail; set => base.NormalizedEmail = value; }
 
         public virtual List<Project> Projects { get; set; }
+        public virtual List<Task> Tasks { get; set; }
     }
 }

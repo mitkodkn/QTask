@@ -32,6 +32,7 @@ namespace QTask
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddEntityFrameworkStores<TaskManagementDbContext>()
                 .AddDefaultTokenProviders();
 
             services.AddDbContext<TaskManagementDbContext>(options =>

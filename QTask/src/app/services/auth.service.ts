@@ -14,12 +14,17 @@ export class AuthenticationService {
     }
 
     login(username: string, password: string): any {
-        var user = { username, password };
+        var user = { Email: username, Password: password };
 
-        localStorage.setItem('currentUser', JSON.stringify({ username }));
-
-        alert("You have logged in successfully");
-        this.router.navigateByUrl('/home');
+        this.http.post("/auth/login", user, this.options)
+            .toPromise()
+            .then((response: Response) => {
+                localStorage.setItem('currentUser', JSON.stringify(response.json()));
+                this.router.navigateByUrl('/home');
+            })
+            .catch(() => {
+                alert("Incorrect data!");
+            })
 
         // return this.http
         //     .post('/api/authenticate', JSON.stringify(user), this.options)

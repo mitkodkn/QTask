@@ -26,27 +26,27 @@ export class ProjectService {
 
     createProject(project: Project): any {
         return this.http
-            .post('/api/projects', JSON.stringify(project), this.options)
+            .post('/api/project', JSON.stringify(project), this.options)
             .toPromise()
-            .then(response =>{
+            .then(response => {
                 this.router.navigateByUrl('/home');
                 alert("You have created project successfully.");
-                response.json().data 
+                response.json().data;
             })
             .catch(er => alert(JSON.parse(er._body).error));
     }
 
     getProjects(): any {
-        return this.projects;
-        // return this.http
-        //     .get('/api/projects', this.options)
-        //     .toPromise()
-        //     .then(response =>{
-        //       //  this.router.navigateByUrl('/jobs');
-        //         alert("You have created project successfully.");
-        //         return response.json().data 
-        //     })
-        //     .catch(er => alert(JSON.parse(er._body).error));
+         return this.http
+             .get('/api/project', this.options)
+             .toPromise()
+             .then(response =>{
+               //  this.router.navigateByUrl('/jobs');
+                 alert("You have created project successfully.");
+                 console.log(response);
+                 return response.json().data;
+             })
+             .catch(er => alert(JSON.parse(er._body).error));
     }
 
     getProject(id: number) {

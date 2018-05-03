@@ -81,6 +81,8 @@ namespace QTask.Migrations
                     b.Property<long>("TaskId")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("ExecutorId");
+
                     b.Property<bool>("IsCompleted");
 
                     b.Property<string>("Name");
@@ -88,6 +90,8 @@ namespace QTask.Migrations
                     b.Property<long>("ProjectId");
 
                     b.HasKey("TaskId");
+
+                    b.HasIndex("ExecutorId");
 
                     b.HasIndex("ProjectId");
 
@@ -103,6 +107,10 @@ namespace QTask.Migrations
 
             modelBuilder.Entity("QTask.Models.Task", b =>
                 {
+                    b.HasOne("QTask.Models.ApplicationUser", "Executor")
+                        .WithMany("Tasks")
+                        .HasForeignKey("ExecutorId");
+
                     b.HasOne("QTask.Models.Project", "Project")
                         .WithMany("Tasks")
                         .HasForeignKey("ProjectId")

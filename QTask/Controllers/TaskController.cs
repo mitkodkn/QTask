@@ -27,7 +27,9 @@ namespace QTask.Controllers
         [HttpGet]
         public IEnumerable<Task> Get()
         {
-            return _context.Tasks.ToList();
+            return _context.Tasks
+                .Include(t => t.Executor)
+                .ToList();
         }
 
         // GET: api/Task/5
@@ -36,6 +38,7 @@ namespace QTask.Controllers
         {
             var task = _context.Tasks
                 .Include(t => t.Project)
+                .Include(t => t.Executor)
                 .FirstOrDefault(t => t.TaskId == id);
 
             if (task == null)
